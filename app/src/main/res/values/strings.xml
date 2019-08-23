@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">TrueSaviour</string>
+
+    <string name="title_home">Home</string>
+    <string name="title_selftest">Selftest</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_activity_login">Sign in</string>
+    <!-- Strings related to login -->
+    <string name="contact_us">Contact us</string>
+    <string name="about_us">About us</string>
+    <string name="help">Help</string>
+    <string name="copy_right" translatable="false">Copyrights © %1$d</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="para1">A place where you can get the support and attention that you need. Get online counselling from professionals and keep track of your mental and emotional wellness.</string>
+    <string name="stay_mentally_emotially_fit_with_truesaviour"><![CDATA[Stay Mentally & Emotially Fit with TrueSaviour.]]></string>
+    <string name="para2">Mental health is just as important as physical illness. It includes our emotional, psychological, and social well-being. It affects how we think, feel, and act. It also helps determine how we handle stress, relate to others, and make choices. It is important at every stage of life, from childhood and adolescence through adulthood.</string>
+    <string name="para3">TrueSaviour can provide you with personalized assistance to improve your mental well beaing and help you during the times of your troubles.</string>
+    <string name="para4">Use online chat sessions or voice/video calls to connect with an expert counsellor anytime and anywhere.</string>
+    <string name="para5">TS Bot is a free personalized AI assistant for you. It is specifically designed to help you deal with your issues and problems. You can tell it your problems, about your day and it will help you navigate through your issues.</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+</resources>

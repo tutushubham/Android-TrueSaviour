@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:alpha="0.9"
+    android:background="@drawable/wall4"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/activity_horizontal_margin">
+
+        <ImageView
+            android:id="@+id/img1"
+            android:layout_width="match_parent"
+            android:layout_height="101dp"
+            android:src="@drawable/navbar_logo" />
+
+        <com.github.florent37.materialtextfield.MaterialTextField
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/input_email"
+            app:mtf_image="@drawable/ic_profile"
+            app:mtf_labelColor="#666">
+
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/Sapphire"
+                android:hint="Name"
+                android:inputType="textPersonName" />
+
+        </com.github.florent37.materialtextfield.MaterialTextField>
+
+        <com.github.florent37.materialtextfield.MaterialTextField
+            android:id="@+id/input_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/phonenum"
+            app:mtf_image="@drawable/ic_contact"
+            app:mtf_labelColor="#666">
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="@color/Sapphire"
+                android:hint="Email"
+                android:inputType="textEmailAddress" />
+
+        </com.github.florent37.materialtextfield.MaterialTextField>
+
+        <com.github.florent37.materialtextfield.MaterialTextField
+            android:id="@+id/phonenum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_centerInParent="true"
+            app:mtf_image="@drawable/ic_call"
+            app:mtf_labelColor="#666">
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/Sapphire"
+                android:hint="Phone"
+                android:inputType="phone" />
+
+        </com.github.florent37.materialtextfield.MaterialTextField>
+
+
+        <EditText
+            android:id="@+id/contactcontent"
+            android:layout_width="fill_parent"
+            android:layout_height="150dp"
+            android:layout_below="@id/phonenum"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:alpha="0.4"
+            android:background="@color/Buttoncol"
+            android:fitsSystemWindows="true"
+            android:gravity="top"
+            android:hint="Your Message"
+            android:inputType="textMultiLine"
+            android:padding="5dp"
+            android:singleLine="false" />
+
+
+        <info.hoang8f.widget.FButton
+            android:id="@+id/submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/contactcontent"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="10dp"
+            android:background="@color/fbutton_color_pumpkin"
+            android:text="Submit"
+            android:textColor="@android:color/white"
+            app:buttonColor="@color/fbutton_color_pumpkin" />
+
+
+    </RelativeLayout>
+
+    <nl.dionsegijn.konfetti.KonfettiView
+        android:id="@+id/viewKonfetti"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+</RelativeLayout>

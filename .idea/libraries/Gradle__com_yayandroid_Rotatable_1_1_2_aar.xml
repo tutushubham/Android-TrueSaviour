@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: com.yayandroid:Rotatable:1.1.2@aar">
+    <ANNOTATIONS>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/23695180ace220a82d4e7f054fcb2e65/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/23695180ace220a82d4e7f054fcb2e65/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/23695180ace220a82d4e7f054fcb2e65/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.yayandroid/Rotatable/1.1.2/d594c4921f56df9fa6619d4d4f665fe873b0e9d4/Rotatable-1.1.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

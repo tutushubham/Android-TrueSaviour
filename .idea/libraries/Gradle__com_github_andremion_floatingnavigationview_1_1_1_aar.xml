@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.andremion:floatingnavigationview:1.1.1@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4eb7c57da3ebebd4c55960fe5a3cd8c3/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4eb7c57da3ebebd4c55960fe5a3cd8c3/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.andremion/floatingnavigationview/1.1.1/14c961c20e8eb1438bd9362f47d623aa6cedf9c8/floatingnavigationview-1.1.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/heading"
+            android:layout_width="match_parent"
+            android:layout_height="101dp"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:contentDescription="Logo"
+            android:src="@drawable/navbar_logo" />
+
+        <ImageView
+            android:id="@+id/img1"
+            android:layout_width="wrap_content"
+            android:padding="10dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/heading"
+            android:src="@drawable/first" />
+
+        <TextView
+            android:id="@+id/heading1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img1"
+            android:fontFamily="@font/ubuntul"
+            android:layout_centerHorizontal="true"
+            android:text="We Help Make Your Life Better"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="35sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/subheading1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/heading1"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/ubuntul"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:text="@string/stay_mentally_emotially_fit_with_truesaviour"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="25sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/para1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ubuntul"
+            android:layout_below="@id/subheading1"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:text="@string/para1"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+        <info.hoang8f.widget.FButton
+            android:id="@+id/getStarted"
+            android:layout_width="match_parent"
+            android:fontFamily="@font/ubuntul"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/para1"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:text="Get Started"
+            android:textColor="@android:color/white" />
+
+
+        <ImageView
+            android:id="@+id/img2"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:layout_below="@id/getStarted"
+            android:src="@drawable/five" />
+
+
+        <TextView
+            android:id="@+id/subheading2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img2"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:text="Mental and Emotional Wellness is Important"
+            android:textAlignment="center"
+            android:fontFamily="@font/ubuntul"
+            android:textColor="@android:color/white"
+            android:textSize="25sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/para2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ubuntul"
+            android:layout_below="@id/subheading2"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:text="@string/para2"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/heading3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/para2"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/ubuntul"
+            android:text="How TrueSaviour Helps"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="35sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/subheading3"
+            android:layout_width="wrap_content"
+            android:fontFamily="@font/ubuntul"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/heading3"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:text="Customized Attention to Take Care of Your Mental Well Being"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="25sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/para3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ubuntul"
+            android:layout_below="@id/subheading3"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:text="@string/para3"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/smallImg1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/para3"
+            android:layout_margin="8dp"
+            android:src="@drawable/farmer_headphones" />
+
+        <TextView
+            android:id="@+id/point1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/smallImg1"
+            android:fontFamily="@font/ubuntul"
+            android:layout_toEndOf="@id/smallImg1"
+            android:text="Customized music track recomendations."
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/smallImg2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/smallImg1"
+            android:layout_margin="8dp"
+            android:src="@drawable/farmer_phone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@id/point1"
+            android:fontFamily="@font/ubuntul"
+            android:layout_alignTop="@id/smallImg2"
+            android:layout_toEndOf="@id/smallImg2"
+            android:text="Wallpapers that make your day bright"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/smallImg3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/smallImg2"
+            android:layout_margin="8dp"
+            android:src="@drawable/truesaviour_mic" />
+
+        <TextView
+            android:id="@+id/point3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@id/point1"
+            android:fontFamily="@font/ubuntul"
+            android:layout_alignTop="@id/smallImg3"
+            android:layout_toEndOf="@id/smallImg3"
+            android:text="Inspiring and motivating blog posts, stories and videos."
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/img3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/point3"
+            android:src="@drawable/four" />
+
+        <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+
+        <TextView
+            android:id="@+id/subheading4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img3"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:fontFamily="@font/ubuntul"
+            android:text="Connect With an Expert Counsellor"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="25sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/para4"
+            android:layout_width="wrap_content"
+            android:fontFamily="@font/ubuntul"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/subheading4"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:text="@string/para4"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/smallImg4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/para4"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="16dp"
+            android:src="@drawable/truesaviour_schedule" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:fontFamily="@font/ubuntul"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/smallImg4"
+            android:layout_margin="16dp"
+            android:text="Schedule appointments."
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/smallImg5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/smallImg4"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="16dp"
+            android:src="@drawable/vault" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:fontFamily="@font/ubuntul"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/smallImg5"
+            android:layout_margin="16dp"
+            android:text="Anonymous and Secure."
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/smallImg6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/smallImg5"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="16dp"
+            android:src="@drawable/analytics" />
+
+        <TextView
+            android:id="@+id/point6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ubuntul"
+            android:layout_alignTop="@id/smallImg6"
+            android:layout_margin="16dp"
+            android:text="Get progress report and analytics"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/img4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/point6"
+            android:src="@drawable/three" />
+
+        <TextView
+            android:id="@+id/subheading5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img4"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/ubuntul"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:text="Health Companion"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="25sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/para5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ubuntul"
+            android:layout_below="@id/subheading5"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:text="@string/para5"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/smallImg7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/para5"
+            android:layout_margin="8dp"
+            android:src="@drawable/shield_icon_feature" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ubuntul"
+            android:layout_alignStart="@id/point1"
+            android:layout_alignTop="@id/smallImg7"
+            android:layout_toEndOf="@id/smallImg7"
+            android:text="Secure and Confidential."
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/smallImg8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/smallImg7"
+            android:layout_margin="8dp"
+            android:src="@drawable/hour" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ubuntul"
+            android:layout_alignStart="@id/point1"
+            android:layout_alignTop="@id/smallImg8"
+            android:layout_toEndOf="@id/smallImg8"
+            android:text="24/7 Anytime Anywhere."
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/smallImg9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/smallImg8"
+            android:layout_margin="8dp"
+            android:src="@drawable/farmer_book" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@id/point1"
+            android:fontFamily="@font/ubuntul"
+            android:layout_alignTop="@id/smallImg9"
+            android:layout_toEndOf="@id/smallImg9"
+            android:text="Personal diary and mood log."
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/talkNow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/smallImg9"
+            android:layout_margin="16dp"
+            android:fontFamily="@font/ubuntul"
+            android:background="@color/Buttoncol"
+            android:text="Talk Now"
+            android:textColor="@android:color/white" />
+
+
+    </RelativeLayout>
+
+</ScrollView>

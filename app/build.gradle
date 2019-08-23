@@ -1,0 +1,57 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 29
+    defaultConfig {
+        applicationId "com.vaidik.truesaviour"
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.assassin.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.vectordrawable:vectordrawable:1.0.1'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0'
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.41'
+
+
+    implementation 'com.github.andremion:floatingnavigationview:1.1.1'
+    implementation 'com.github.florent37:materialtextfield:1.0.7'
+    implementation 'info.hoang8f:fbutton:1.0.5'
+    implementation 'nl.dionsegijn:konfetti:1.1.3'
+    implementation 'com.yayandroid:Rotatable:1.1.2'
+    implementation 'ru.github.igla:ferriswheel:1.2'
+    implementation 'com.github.medyo:android-about-page:1.2.5'
+    implementation 'com.sothree.slidinguppanel:library:3.4.0'
+
+    implementation 'com.scaledrone:scaledrone-java:0.6.0'
+
+    implementation 'com.google.android.gms:play-services-location:17.0.0'
+
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'io.paperdb:paperdb:2.6'
+
+    implementation 'com.stone.vega.library:VegaLayoutManager:1.0.6'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'com.ramotion.cardslider:card-slider:0.3.1'
+
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+}

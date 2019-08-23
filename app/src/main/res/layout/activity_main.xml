@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/drawable_gradient_animation_list"
+    tools:context=".MainActivity">
+
+
+    <include
+        layout="@layout/content_main"
+        app:layout_anchorGravity="top|center" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/Force"
+        android:elevation="4dp"
+        android:theme="@style/AppTheme"
+        app:popupTheme="@style/AppTheme" />
+
+
+    <com.andremion.floatingnavigationview.FloatingNavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:adjustViewBounds="false"
+        android:backgroundTint="@color/Buttoncol"
+        android:backgroundTintMode="src_atop"
+        android:elevation="4dp"
+        android:foregroundGravity="center_vertical|center_horizontal"
+        android:src="@drawable/icon"
+        android:visibility="visible"
+        app:backgroundTint="@color/Buttoncol"
+        app:backgroundTintMode="src_atop"
+        app:borderWidth="0dp"
+        app:drawMenuBelowFab="false"
+        app:fabSize="mini"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/drawer_menu" />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
