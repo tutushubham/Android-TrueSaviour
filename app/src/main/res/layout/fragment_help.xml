@@ -12,7 +12,7 @@
     sothree:umanoPanelHeight="68dp"
     sothree:umanoParallaxOffset="100dp"
     sothree:umanoShadowHeight="4dp"
-    tools:context=".Help">
+    tools:context=".activites.Help">
 
     <RelativeLayout
         android:layout_width="match_parent"

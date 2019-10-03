@@ -6,6 +6,6 @@
     android:id="@+id/container"
 
 
-    tools:context=".NavFrag">
+    tools:context=".UI.NavFrag">
 
 </FrameLayout>

@@ -1,4 +1,4 @@
-package com.vaidik.truesaviour;
+package com.vaidik.truesaviour.activites;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -20,6 +20,8 @@ import com.sothree.slidinguppanel.SlidingUpPanelLayout;
 import com.sothree.slidinguppanel.SlidingUpPanelLayout.PanelSlideListener;
 import com.sothree.slidinguppanel.SlidingUpPanelLayout.PanelState;
 import com.stone.vega.library.VegaLayoutManager;
+import com.vaidik.truesaviour.Adapter;
+import com.vaidik.truesaviour.R;
 
 import java.util.Arrays;
 import java.util.List;

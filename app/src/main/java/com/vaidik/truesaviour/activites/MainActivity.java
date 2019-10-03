@@ -1,4 +1,4 @@
-package com.vaidik.truesaviour;
+package com.vaidik.truesaviour.activites;
 
 import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
@@ -17,6 +17,12 @@ import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import com.andremion.floatingnavigationview.FloatingNavigationView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
+import com.vaidik.truesaviour.Notif;
+import com.vaidik.truesaviour.R;
+import com.vaidik.truesaviour.TSBot;
+import com.vaidik.truesaviour.UI.Dashboard;
+import com.vaidik.truesaviour.UI.Home;
+import com.vaidik.truesaviour.UI.NavFrag;
 
 import java.util.Objects;
 

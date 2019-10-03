@@ -72,7 +72,7 @@ public class ActivityTransitionPage extends AppCompatActivity {
         refresh();
     }
 
-    private void refresh() {
+    public void refresh() {
         ArrayList<ActivityTransitionEventWrapper> events = Paper.book().read("activities", new ArrayList<ActivityTransitionEventWrapper>());
         List<String> inputActi = new ArrayList<>();
         List<String> inputTimei = new ArrayList<>();
@@ -95,7 +95,7 @@ public class ActivityTransitionPage extends AppCompatActivity {
     }
 
 
-    private void startGetBroadcast(PendingIntent pendingIntent, ActivityTransitionRequest request, final String type) {
+    public void startGetBroadcast(PendingIntent pendingIntent, ActivityTransitionRequest request, final String type) {
         // myPendingIntent is the instance of PendingIntent where the app receives callbacks.
         Task<Void> task = ActivityRecognition.getClient(this).requestActivityTransitionUpdates(request, pendingIntent);
         task.addOnSuccessListener(new OnSuccessListener<Void>() {
@@ -118,7 +118,7 @@ public class ActivityTransitionPage extends AppCompatActivity {
         });
     }
 
-    private List<ActivityTransition> getTransitionActivityList() {
+    public List<ActivityTransition> getTransitionActivityList() {
         List<ActivityTransition> transitions = new ArrayList<>();
         for (int activity : detectedActivity) {
             transitions.add(

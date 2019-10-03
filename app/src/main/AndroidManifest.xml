@@ -10,13 +10,14 @@
     <uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION" />
 
     <application
+        android:usesCleartextTraffic="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".Splash"
+            android:name=".UI.Splash"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -30,14 +31,14 @@
             android:windowSoftInputMode="stateVisible|adjustPan" />
         <activity android:name=".SelfTest" />
         <activity
-            android:name=".SignUp"
+            android:name=".activites.SignUp"
             android:windowSoftInputMode="stateVisible|adjustPan" />
-        <activity android:name=".NavFrag" />
+        <activity android:name=".UI.NavFrag" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".activites.LoginActivity"
             android:label="@string/title_activity_login"
             android:windowSoftInputMode="stateVisible|adjustPan" />
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".activites.MainActivity"></activity>
 
         <receiver
             android:name=".TransitionBroadcastReceiver"

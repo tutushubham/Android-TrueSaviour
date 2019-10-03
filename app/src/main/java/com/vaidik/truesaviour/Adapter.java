@@ -21,12 +21,12 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
             R.drawable.ic_on_bicycle,
             R.drawable.ic_unknown,
     };
-    private List<String> actiList;
-    private List<String> timeiList;
-    private List<String> transiList;
+    List<String> actiList;
+    List<String> timeiList;
+    List<String> transiList;
 
 
-    Adapter(List<String> myDataset, List<String> myDataset2, List<String> myDataset3) {
+    public Adapter(List<String> myDataset, List<String> myDataset2, List<String> myDataset3) {
         actiList = myDataset;
         if (myDataset2 != null)
             timeiList = myDataset2;
@@ -34,7 +34,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
             transiList = myDataset3;
     }
 
-    Adapter(List<String> myDataset) {
+    public Adapter(List<String> myDataset) {
         actiList = myDataset;
         Log.e("error", "hello ");
     }

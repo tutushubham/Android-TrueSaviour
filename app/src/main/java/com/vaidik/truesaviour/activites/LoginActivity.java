@@ -1,4 +1,4 @@
-package com.vaidik.truesaviour;
+package com.vaidik.truesaviour.activites;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -13,16 +13,23 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.vaidik.truesaviour.API.RetrofitClient;
+import com.vaidik.truesaviour.R;
+import com.vaidik.truesaviour.models.LoginResponse;
+
 import nl.dionsegijn.konfetti.KonfettiView;
 import nl.dionsegijn.konfetti.models.Shape;
 import nl.dionsegijn.konfetti.models.Size;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 
 public class LoginActivity extends AppCompatActivity {
     private static final String TAG = "LoginActivity";
     private static final int REQUEST_SIGNUP = 0;
 
-    EditText _emailText;
+    EditText _idText;
     EditText _passwordText;
     Button _loginButton;
     TextView _signupLink;
@@ -32,7 +39,7 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        _emailText = findViewById(R.id.input_email);
+        _idText = findViewById(R.id.input_id);
         _passwordText = findViewById(R.id.input_password);
         _loginButton = findViewById(R.id.btn_login);
         _signupLink = findViewById(R.id.link_signup);
@@ -86,10 +93,37 @@ public class LoginActivity extends AppCompatActivity {
         progressDialog.setMessage("Authenticating...");
         progressDialog.show();
 
-        String email = _emailText.getText().toString();
+        String id = _idText.getText().toString();
         String password = _passwordText.getText().toString();
 
-        // TODO: Implement your own authentication logic here.
+        Call<LoginResponse> call = RetrofitClient
+                .getInstance().getApi().userLogin(id, password);
+
+        call.enqueue(new Callback<LoginResponse>() {
+            @Override
+            public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
+                LoginResponse loginResponse = response.body();
+
+                if (loginResponse.getMessage().equals("Login Successful")) {
+
+                    Toast.makeText(LoginActivity.this, loginResponse.getMessage(), Toast.LENGTH_LONG).show();
+                    Log.e("Response: ", loginResponse.getMessage());
+//                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+//                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+//                    startActivity(intent);
+
+
+                } else {
+                    Toast.makeText(LoginActivity.this, loginResponse.getMessage(), Toast.LENGTH_LONG).show();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<LoginResponse> call, Throwable t) {
+
+            }
+        });
+
 
         new android.os.Handler().postDelayed(
                 new Runnable() {
@@ -134,17 +168,17 @@ public class LoginActivity extends AppCompatActivity {
     public boolean validate() {
         boolean valid = true;
 
-        String email = _emailText.getText().toString();
+        String id = _idText.getText().toString();
         String password = _passwordText.getText().toString();
 
-        if (email.isEmpty() || !android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-            _emailText.setError("enter a valid email address");
+        if (id.isEmpty() || id.length() < 3) {
+            _idText.setError("at least 3 characters");
             valid = false;
         } else {
-            _emailText.setError(null);
+            _idText.setError(null);
         }
 
-        if (password.isEmpty() || password.length() < 4 || password.length() > 10) {
+        if (password.isEmpty() || password.length() < 4) {
             _passwordText.setError("between 4 and 10 alphanumeric characters");
             valid = false;
         } else {

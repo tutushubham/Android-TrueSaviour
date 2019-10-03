@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:id="@+id/container"
     android:background="@drawable/drawable_gradient_animation_list"
-    tools:context="com.vaidik.truesaviour.NavFrag">
+    tools:context="com.vaidik.truesaviour.UI.NavFrag">
 
     <ListView
         android:id="@+id/messages_view"

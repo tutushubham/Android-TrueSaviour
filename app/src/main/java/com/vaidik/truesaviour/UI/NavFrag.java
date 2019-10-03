@@ -1,9 +1,15 @@
-package com.vaidik.truesaviour;
+package com.vaidik.truesaviour.UI;
 
 import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.vaidik.truesaviour.R;
+import com.vaidik.truesaviour.activites.About;
+import com.vaidik.truesaviour.activites.ChatBox;
+import com.vaidik.truesaviour.activites.ContactUs;
+import com.vaidik.truesaviour.activites.Help;
 
 public class NavFrag extends AppCompatActivity {
 

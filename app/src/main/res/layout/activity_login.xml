@@ -34,12 +34,12 @@
                 app:mtf_labelColor="@color/Deep">
 
                 <EditText
-                    android:id="@+id/input_email"
+                    android:id="@+id/input_id"
                     android:layout_width="match_parent"
                     android:fontFamily="@font/ubuntul"
                     android:layout_height="wrap_content"
-                    android:hint="Email"
-                    android:inputType="textEmailAddress" />
+                    android:hint="ID"
+                    android:inputType="textCapWords" />
 
             </com.github.florent37.materialtextfield.MaterialTextField>
 

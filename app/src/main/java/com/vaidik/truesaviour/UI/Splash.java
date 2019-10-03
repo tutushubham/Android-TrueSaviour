@@ -1,4 +1,4 @@
-package com.vaidik.truesaviour;
+package com.vaidik.truesaviour.UI;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,6 +6,9 @@ import android.os.Handler;
 import android.view.WindowManager;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.vaidik.truesaviour.R;
+import com.vaidik.truesaviour.activites.LoginActivity;
 
 
 public class Splash extends AppCompatActivity {
@@ -29,7 +32,7 @@ public class Splash extends AppCompatActivity {
             @Override
             public void run() {
                 Intent i = new Intent(Splash.this,
-                        MainActivity.class);
+                        LoginActivity.class);
                 //Intent is used to switch from one activity to another.
 
                 startActivity(i);
