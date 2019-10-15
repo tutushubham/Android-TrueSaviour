@@ -208,9 +208,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="353" />
-    <option name="y" value="-30" />
-    <option name="width" value="1453" />
+    <option name="x" value="392" />
+    <option name="y" value="177" />
+    <option name="width" value="1454" />
     <option name="height" value="880" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -297,6 +297,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android.sdk.path" value="C:/Program Files/Android/sdk" />
     <property name="device.picker.selection" value="ZY322B52QR" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/java/com/vaidik/truesaviour" />
