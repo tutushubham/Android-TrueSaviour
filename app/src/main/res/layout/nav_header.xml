@@ -11,6 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end"
+        android:contentDescription="DP"
         android:src="@drawable/ic_profile" />
 
     <TextView
@@ -19,7 +20,7 @@
         android:fontFamily="@font/ubuntul"
         android:paddingTop="8dp"
         android:textColor="@android:color/black"
-        android:text="Shubham"
+        android:text="@string/username"
         android:textStyle="bold"
         />
 
@@ -28,7 +29,7 @@
         android:layout_height="wrap_content"
         android:textColor="@android:color/black"
         android:fontFamily="@font/ubuntul"
-        android:text="Vaidik Technologies"
+        android:text="@string/user_email"
         android:textStyle="bold" />
 
 </LinearLayout>

@@ -20,6 +20,7 @@
                     android:id="@+id/img1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:contentDescription="picture"
                     android:src="@drawable/test" />
 
                 <TextView
@@ -29,7 +30,7 @@
                     android:fontFamily="@font/ubuntul"
                     android:layout_below="@id/img1"
                     android:layout_centerHorizontal="true"
-                    android:text="Self Test to Analyze Your Mental Health"
+                    android:text="@string/heading1"
                     android:textAlignment="center"
                     android:textColor="@android:color/black"
                     android:textSize="40sp"
@@ -43,7 +44,7 @@
                     android:fontFamily="@font/ubuntul"
                     android:layout_centerHorizontal="true"
                     android:layout_margin="@dimen/activity_horizontal_margin"
-                    android:text="Take some time to know about your mental and emotional health."
+                    android:text="@string/subheading1"
                     android:textAlignment="center"
                     android:textColor="@android:color/black"
                     android:textSize="30sp"
@@ -67,6 +68,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/para1"
+                    android:contentDescription="picture2"
                     android:src="@drawable/saviours" />
 
 
@@ -78,7 +80,7 @@
                     android:layout_below="@id/img2"
                     android:layout_margin="16dp"
                     android:background="@color/Buttoncol"
-                    android:text="Start Test"
+                    android:text="@string/start_test"
                     android:textColor="@android:color/black"
                     android:textStyle="bold" />
 
