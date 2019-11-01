@@ -1,6 +1,5 @@
 package com.vaidik.truesaviour.activites;
 
-import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -87,11 +86,6 @@ public class LoginActivity extends AppCompatActivity {
 
         _loginButton.setEnabled(false);
 
-        final ProgressDialog progressDialog = new ProgressDialog(LoginActivity.this,
-                R.style.AppTheme);
-        progressDialog.setIndeterminate(true);
-        progressDialog.setMessage("Authenticating...");
-        progressDialog.show();
 
         String id = _idText.getText().toString();
         String password = _passwordText.getText().toString();
@@ -110,18 +104,20 @@ public class LoginActivity extends AppCompatActivity {
 
                 LoginResponse loginResponse = response.body();
 
-                if (loginResponse.getMessage().equals("login successful")) {
+                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                startActivity(intent);
+
+                /*if (loginResponse.getMessage().equals("login successful")) {
 
                     Toast.makeText(LoginActivity.this, loginResponse.getMessage(), Toast.LENGTH_LONG).show();
                     Log.e("Response: ", loginResponse.getMessage());
                     Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     startActivity(intent);
 
 
                 } else {
-                    Toast.makeText(LoginActivity.this, loginResponse.getMessage(), Toast.LENGTH_LONG).show();
-                }
+                    Toast.makeText(LoginActivity.this, "faileeddddddd", Toast.LENGTH_LONG).show();
+                }*/
 
             }
 
@@ -131,16 +127,6 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-
-        new android.os.Handler().postDelayed(
-                new Runnable() {
-                    public void run() {
-                        // On complete call either onLoginSuccess or onLoginFailed
-                        onLoginSuccess();
-                        // onLoginFailed();
-                        progressDialog.dismiss();
-                    }
-                }, 3000);
     }
 
 
@@ -161,10 +147,6 @@ public class LoginActivity extends AppCompatActivity {
         super.onBackPressed();
     }
 
-    public void onLoginSuccess() {
-        _loginButton.setEnabled(true);
-        finish();
-    }
 
     public void onLoginFailed() {
         Toast.makeText(getBaseContext(), "Login failed", Toast.LENGTH_LONG).show();
