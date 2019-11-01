@@ -20,7 +20,6 @@ public class LoginResponse {
 
 
     public String getMessage() {
-        Log.e("Response: ", "retmsg  pre");
         return message;
     }
 
