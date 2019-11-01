@@ -97,30 +97,37 @@ public class LoginActivity extends AppCompatActivity {
         String password = _passwordText.getText().toString();
 
         Call<LoginResponse> call = RetrofitClient
-                .getInstance().getApi().userLogin(id, password);
+                .getInstance().getApi().userLogin(new LoginResponse(id, password));
+
+        Log.e("req: ", id + " " + password + " ");
+
 
         call.enqueue(new Callback<LoginResponse>() {
+
             @Override
             public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
+                Log.e("Response: ", String.valueOf(response.code()));
+
                 LoginResponse loginResponse = response.body();
 
-                if (loginResponse.getMessage().equals("Login Successful")) {
+                if (loginResponse.getMessage().equals("login successful")) {
 
                     Toast.makeText(LoginActivity.this, loginResponse.getMessage(), Toast.LENGTH_LONG).show();
                     Log.e("Response: ", loginResponse.getMessage());
-//                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-//                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-//                    startActivity(intent);
+                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                    startActivity(intent);
 
 
                 } else {
                     Toast.makeText(LoginActivity.this, loginResponse.getMessage(), Toast.LENGTH_LONG).show();
                 }
+
             }
 
             @Override
             public void onFailure(Call<LoginResponse> call, Throwable t) {
-
+                Log.e("Response: ", "failure");
             }
         });
 
@@ -144,7 +151,7 @@ public class LoginActivity extends AppCompatActivity {
 
                 // TODO: Implement successful signup logic here
                 // By default we just finish the Activity and log them in automatically
-                this.finish();
+
             }
         }
     }
