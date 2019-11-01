@@ -7,7 +7,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.vaidik.truesaviour.R;
 import com.vaidik.truesaviour.activites.About;
-import com.vaidik.truesaviour.activites.ChatBox;
 import com.vaidik.truesaviour.activites.ContactUs;
 import com.vaidik.truesaviour.activites.Help;
 
@@ -24,12 +23,6 @@ public class NavFrag extends AppCompatActivity {
         recInt = getIntent();
 
 
-        if (recInt.getStringExtra("page").equalsIgnoreCase("chat")) {
-            getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.container, new ChatBox())
-                    .commitNow();
-
-        }
         if (recInt.getStringExtra("page").equalsIgnoreCase("profile")) {
             getSupportFragmentManager().beginTransaction()
                     .replace(R.id.container, new ProfilePage())

@@ -5,8 +5,8 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/drawable_gradient_animation_list"
-    tools:context=".TSBot">
+    android:background="@color/Light"
+    tools:context=".activites.TSbot">
 
     <ListView
         android:id="@+id/messages_view"
@@ -54,13 +54,13 @@
             android:layout_width="64dp"
             android:layout_height="48dp"
             android:layout_gravity="bottom"
-            android:background="?attr/selectableItemBackground"
+            android:background="@color/Buttoncol"
             android:fontFamily="@font/ubuntul"
             android:clickable="true"
             android:focusable="true"
             android:gravity="center"
-            android:onClick="sendMessage"
             android:text="SEND"
+            android:textStyle="bold"
             android:textSize="14sp" />
 
     </LinearLayout>
