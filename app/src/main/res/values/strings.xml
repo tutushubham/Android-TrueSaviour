@@ -3,7 +3,7 @@
 
     <string name="title_home">Home</string>
     <string name="title_selftest">Selftest</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="track">Track</string>
     <string name="title_activity_login">Sign in</string>
     <!-- Strings related to login -->
     <string name="contact_us">Contact us</string>

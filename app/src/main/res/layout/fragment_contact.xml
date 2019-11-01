@@ -31,7 +31,7 @@
             <EditText
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/Sapphire"
+                android:backgroundTint="@color/Light"
                 android:hint="Name"
                 android:inputType="textPersonName" />
 
@@ -50,7 +50,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
-                android:backgroundTint="@color/Sapphire"
+                android:backgroundTint="@color/Light"
                 android:hint="Email"
                 android:inputType="textEmailAddress" />
 
@@ -68,7 +68,7 @@
             <EditText
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/Sapphire"
+                android:backgroundTint="@color/Light"
                 android:hint="Phone"
                 android:inputType="phone" />
 
@@ -101,8 +101,9 @@
             android:layout_margin="10dp"
             android:background="@color/fbutton_color_pumpkin"
             android:text="Submit"
-            android:textColor="@android:color/white"
-            app:buttonColor="@color/fbutton_color_pumpkin" />
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            app:buttonColor="@color/Buttoncol" />
 
 
     </RelativeLayout>

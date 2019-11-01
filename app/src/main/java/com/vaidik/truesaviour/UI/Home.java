@@ -13,7 +13,6 @@ import androidx.fragment.app.Fragment;
 
 import com.vaidik.truesaviour.R;
 import com.vaidik.truesaviour.activites.LoginActivity;
-import com.yayandroid.rotatable.Rotatable;
 
 
 public class Home extends Fragment {
@@ -28,13 +27,6 @@ public class Home extends Fragment {
         Button getStarted = view.findViewById(R.id.getStarted);
         Button talkNow = view.findViewById(R.id.talkNow);
 
-        new Rotatable.Builder(view.findViewById(R.id.heading))
-                .direction(Rotatable.ROTATE_X)
-                .build();
-
-        new Rotatable.Builder(view.findViewById(R.id.img1))
-                .direction(Rotatable.ROTATE_Y)
-                .build();
 
         getStarted.setOnClickListener(new View.OnClickListener() {
             @Override

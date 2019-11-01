@@ -16,13 +16,14 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/Light">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/help_toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@color/Force"
+            android:background="@color/Light"
             android:elevation="4dp"
             android:theme="@style/AppTheme" />
 

@@ -19,7 +19,7 @@ public class SelfTest extends AppCompatActivity {
 
         wv1 = findViewById(R.id.selfWeb);
         wv1.setWebViewClient(new MyBrowser());
-        String url = "http://35.222.91.111/dass-21/";
+        String url = "http://34.93.170.211/selftest/short-test/";
 
         wv1.getSettings().setLoadsImagesAutomatically(true);
         wv1.getSettings().setJavaScriptEnabled(true);

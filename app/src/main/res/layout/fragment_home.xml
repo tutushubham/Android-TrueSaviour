@@ -2,7 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg">
+    android:background="@color/Light">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -33,7 +33,7 @@
             android:layout_centerHorizontal="true"
             android:text="We Help Make Your Life Better"
             android:textAlignment="center"
-            android:textColor="@android:color/white"
+            android:textColor="@android:color/black"
             android:textSize="35sp"
             android:textStyle="bold" />
 
@@ -48,7 +48,7 @@
             android:layout_margin="@dimen/activity_horizontal_margin"
             android:text="@string/stay_mentally_emotially_fit_with_truesaviour"
             android:textAlignment="center"
-            android:textColor="@android:color/white"
+            android:textColor="@android:color/black"
             android:textSize="25sp"
             android:textStyle="italic" />
 
@@ -62,7 +62,8 @@
             android:layout_margin="@dimen/activity_horizontal_margin"
             android:text="@string/para1"
             android:textAlignment="center"
-            android:textColor="@android:color/white"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
             android:textSize="20sp" />
 
         <info.hoang8f.widget.FButton
@@ -71,10 +72,11 @@
             android:fontFamily="@font/ubuntul"
             android:layout_height="wrap_content"
             android:layout_below="@id/para1"
+            android:textColor="@android:color/black"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:text="Get Started"
-            android:textColor="@android:color/white" />
+            android:textStyle="bold" />
 
 
         <ImageView
@@ -96,7 +98,7 @@
             android:text="Mental and Emotional Wellness is Important"
             android:textAlignment="center"
             android:fontFamily="@font/ubuntul"
-            android:textColor="@android:color/white"
+            android:textColor="@android:color/black"
             android:textSize="25sp"
             android:textStyle="italic" />
 
@@ -110,7 +112,7 @@
             android:layout_margin="@dimen/activity_horizontal_margin"
             android:text="@string/para2"
             android:textAlignment="center"
-            android:textColor="@android:color/white"
+            android:textColor="@android:color/black"
             android:textSize="20sp" />
 
         <TextView
@@ -122,7 +124,7 @@
             android:fontFamily="@font/ubuntul"
             android:text="How TrueSaviour Helps"
             android:textAlignment="center"
-            android:textColor="@android:color/white"
+            android:textColor="@android:color/black"
             android:textSize="35sp"
             android:textStyle="bold" />
 
@@ -136,7 +138,7 @@
             android:layout_margin="@dimen/activity_horizontal_margin"
             android:text="Customized Attention to Take Care of Your Mental Well Being"
             android:textAlignment="center"
-            android:textColor="@android:color/white"
+            android:textColor="@android:color/black"
             android:textSize="25sp"
             android:textStyle="italic" />
 
@@ -150,7 +152,7 @@
             android:layout_margin="@dimen/activity_horizontal_margin"
             android:text="@string/para3"
             android:textAlignment="center"
-            android:textColor="@android:color/white"
+            android:textColor="@android:color/black"
             android:textSize="20sp" />
 
         <ImageView
@@ -169,7 +171,7 @@
             android:fontFamily="@font/ubuntul"
             android:layout_toEndOf="@id/smallImg1"
             android:text="Customized music track recomendations."
-            android:textColor="@android:color/white"
+            android:textColor="@android:color/black"
             android:textSize="20sp" />
 
         <ImageView
@@ -188,7 +190,7 @@
             android:layout_alignTop="@id/smallImg2"
             android:layout_toEndOf="@id/smallImg2"
             android:text="Wallpapers that make your day bright"
-            android:textColor="@android:color/white"
+            android:textColor="@android:color/black"
             android:textSize="20sp" />
 
         <ImageView
@@ -208,7 +210,7 @@
             android:layout_alignTop="@id/smallImg3"
             android:layout_toEndOf="@id/smallImg3"
             android:text="Inspiring and motivating blog posts, stories and videos."
-            android:textColor="@android:color/white"
+            android:textColor="@android:color/black"
             android:textSize="20sp" />
 
         <ImageView
@@ -230,7 +232,7 @@
             android:fontFamily="@font/ubuntul"
             android:text="Connect With an Expert Counsellor"
             android:textAlignment="center"
-            android:textColor="@android:color/white"
+            android:textColor="@android:color/black"
             android:textSize="25sp"
             android:textStyle="italic" />
 
@@ -244,7 +246,7 @@
             android:layout_margin="@dimen/activity_horizontal_margin"
             android:text="@string/para4"
             android:textAlignment="center"
-            android:textColor="@android:color/white"
+            android:textColor="@android:color/black"
             android:textSize="20sp" />
 
         <ImageView
@@ -263,7 +265,7 @@
             android:layout_alignTop="@id/smallImg4"
             android:layout_margin="16dp"
             android:text="Schedule appointments."
-            android:textColor="@android:color/white"
+            android:textColor="@android:color/black"
             android:textSize="20sp" />
 
         <ImageView
@@ -282,7 +284,7 @@
             android:layout_alignTop="@id/smallImg5"
             android:layout_margin="16dp"
             android:text="Anonymous and Secure."
-            android:textColor="@android:color/white"
+            android:textColor="@android:color/black"
             android:textSize="20sp" />
 
         <ImageView
@@ -302,7 +304,7 @@
             android:layout_alignTop="@id/smallImg6"
             android:layout_margin="16dp"
             android:text="Get progress report and analytics"
-            android:textColor="@android:color/white"
+            android:textColor="@android:color/black"
             android:textSize="20sp" />
 
         <ImageView
@@ -322,7 +324,7 @@
             android:layout_margin="@dimen/activity_horizontal_margin"
             android:text="Health Companion"
             android:textAlignment="center"
-            android:textColor="@android:color/white"
+            android:textColor="@android:color/black"
             android:textSize="25sp"
             android:textStyle="italic" />
 
@@ -336,7 +338,7 @@
             android:layout_margin="@dimen/activity_horizontal_margin"
             android:text="@string/para5"
             android:textAlignment="center"
-            android:textColor="@android:color/white"
+            android:textColor="@android:color/black"
             android:textSize="20sp" />
 
         <ImageView
@@ -355,7 +357,7 @@
             android:layout_alignTop="@id/smallImg7"
             android:layout_toEndOf="@id/smallImg7"
             android:text="Secure and Confidential."
-            android:textColor="@android:color/white"
+            android:textColor="@android:color/black"
             android:textSize="20sp" />
 
         <ImageView
@@ -374,7 +376,7 @@
             android:layout_alignTop="@id/smallImg8"
             android:layout_toEndOf="@id/smallImg8"
             android:text="24/7 Anytime Anywhere."
-            android:textColor="@android:color/white"
+            android:textColor="@android:color/black"
             android:textSize="20sp" />
 
         <ImageView
@@ -393,7 +395,7 @@
             android:layout_alignTop="@id/smallImg9"
             android:layout_toEndOf="@id/smallImg9"
             android:text="Personal diary and mood log."
-            android:textColor="@android:color/white"
+            android:textColor="@android:color/black"
             android:textSize="20sp" />
 
         <Button
@@ -405,7 +407,8 @@
             android:fontFamily="@font/ubuntul"
             android:background="@color/Buttoncol"
             android:text="Talk Now"
-            android:textColor="@android:color/white" />
+            android:textColor="@android:color/black"
+            android:textStyle="bold" />
 
 
     </RelativeLayout>

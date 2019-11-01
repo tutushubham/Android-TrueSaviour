@@ -2,13 +2,9 @@
 <resources>
 
     <color name="Buttoncol">#00B2FF</color>
-    <color name="Dodger">#002D72</color>
-    <color name="Crayola">#002855</color>
-    <color name="Navy">#0023E4</color>
-    <color name="Sapphire">#0C56BC</color>
-    <color name="Cobalt">#0643A5</color>
-    <color name="Force">#00308F</color>
-    <color name="Deep">#0011FF</color>
+    <color name="Light">#BFF3CF</color>
+    <color name="Dark">#5ff3ff</color>
+    <color name="Pop">#0023E4</color>
 
 
 </resources>

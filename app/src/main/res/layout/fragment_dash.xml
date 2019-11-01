@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/drawable_gradient_animation_list">
+    android:background="@color/Light">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -31,7 +31,7 @@
                     android:layout_centerHorizontal="true"
                     android:text="Self Test to Analyze Your Mental Health"
                     android:textAlignment="center"
-                    android:textColor="@android:color/white"
+                    android:textColor="@android:color/black"
                     android:textSize="40sp"
                     android:textStyle="bold" />
 
@@ -45,7 +45,7 @@
                     android:layout_margin="@dimen/activity_horizontal_margin"
                     android:text="Take some time to know about your mental and emotional health."
                     android:textAlignment="center"
-                    android:textColor="@android:color/white"
+                    android:textColor="@android:color/black"
                     android:textSize="30sp"
                     android:textStyle="italic" />
 
@@ -59,7 +59,7 @@
                     android:layout_margin="@dimen/activity_horizontal_margin"
                     android:text="@string/para1"
                     android:textAlignment="center"
-                    android:textColor="@android:color/white"
+                    android:textColor="@android:color/black"
                     android:textSize="25sp" />
 
                 <ImageView
@@ -79,7 +79,8 @@
                     android:layout_margin="16dp"
                     android:background="@color/Buttoncol"
                     android:text="Start Test"
-                    android:textColor="@android:color/white" />
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold" />
 
             </RelativeLayout>
         </LinearLayout>

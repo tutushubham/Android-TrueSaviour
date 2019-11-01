@@ -43,6 +43,7 @@ public class Help extends Fragment {
         ferrisWheelView = view.findViewById(R.id.ferrisWheelView);
         ferrisWheelView.startAnimation();
 
+
         recyclerView = view.findViewById(R.id.my_help_recycler_view);
         recyclerView.setLayoutManager(new VegaLayoutManager());
 
@@ -59,10 +60,10 @@ public class Help extends Fragment {
         });*/
 
         List<String> your_array_list = Arrays.asList(
-                "Shubham",
-                "Chinmay",
-                "Sikka",
-                "Saniya"
+                "Shubham Bhattacharyya",
+                "Chinmay Rane",
+                "Mukul Sikka",
+                "Saniya Arora"
         );
 
         RecyclerView.Adapter mAdapter = new Adapter(your_array_list);

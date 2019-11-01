@@ -1,9 +1,7 @@
 package com.vaidik.truesaviour.activites;
 
 import android.content.Intent;
-import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -13,14 +11,12 @@ import android.view.WindowManager;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.coordinatorlayout.widget.CoordinatorLayout;
 
 import com.andremion.floatingnavigationview.FloatingNavigationView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
-import com.vaidik.truesaviour.Notif;
 import com.vaidik.truesaviour.R;
-import com.vaidik.truesaviour.TSBot;
+import com.vaidik.truesaviour.Track;
 import com.vaidik.truesaviour.UI.Dashboard;
 import com.vaidik.truesaviour.UI.Home;
 import com.vaidik.truesaviour.UI.NavFrag;
@@ -31,13 +27,10 @@ import io.paperdb.Paper;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
-    private static int SPLASH_SCREEN_TIME_OUT = 2000;
     Intent intent;
 
     FloatingNavigationView mFloatingNavigationView;
 
-    private CoordinatorLayout coordinatorLayout;
-    private AnimationDrawable animationDrawable;
     //bottom
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -52,7 +45,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Dashboard()).commit();
                     return true;
                 case R.id.navigation_notifications:
-                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Notif()).commit();
+                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Track()).commit();
                     return true;
             }
             return false;
@@ -63,7 +56,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Log.e("here", "1");
+
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
@@ -73,7 +66,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         mFloatingNavigationView = findViewById(R.id.nav_view);
         mFloatingNavigationView.setNavigationItemSelectedListener(this);
-
         mFloatingNavigationView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -84,13 +76,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         BottomNavigationView navigation = findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
-
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Home()).commit();
 
-        coordinatorLayout = findViewById(R.id.container);
-        animationDrawable = (AnimationDrawable) coordinatorLayout.getBackground();
-        animationDrawable.setEnterFadeDuration(3000);
-        animationDrawable.setExitFadeDuration(3000);
 
         Paper.init(this);
 
@@ -101,33 +88,26 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         switch (menuItem.getItemId()) {
 
             case R.id.nav_chat:
-                intent = new Intent(this, TSBot.class);
+                intent = new Intent(this, TSbot.class);
                 startActivity(intent);
-                //getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ChatBox()).commit();
                 break;
             case R.id.nav_profile:
                 intent = new Intent(this, NavFrag.class);
                 intent.putExtra("page", "profile");
                 startActivity(intent);
-                //getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ProfilePage()).commit();
                 break;
             case R.id.nav_contact:
                 intent = new Intent(this, NavFrag.class);
                 intent.putExtra("page", "contact");
                 startActivity(intent);
-                //getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ContactUs()).commit();
                 break;
-            case R.id.nav_login:
+            case R.id.nav_login: //later to be replaced with logout when session started
                 intent = new Intent(this, LoginActivity.class);
-                //intent.putExtra("page", "contact");
                 startActivity(intent);
-                //getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ContactUs()).commit();
                 break;
-            case R.id.nav_signup:
+            case R.id.nav_signup: //later to be replaced with some other feature
                 intent = new Intent(this, SignUp.class);
-                //intent.putExtra("page", "contact");
                 startActivity(intent);
-                //getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ContactUs()).commit();
                 break;
         }
 
@@ -150,25 +130,19 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 intent = new Intent(this, NavFrag.class);
                 intent.putExtra("page", "contact");
                 startActivity(intent);
-                //getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ContactUs()).commit();
                 break;
             case R.id.about_us:
                 intent = new Intent(this, NavFrag.class);
                 intent.putExtra("page", "about");
                 startActivity(intent);
-                //getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new About()).commit();
                 break;
             case R.id.help:
                 intent = new Intent(this, NavFrag.class);
                 intent.putExtra("page", "help");
                 startActivity(intent);
-                //getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Help()).commit();
                 break;
-
             default:
-
         }
-
         return super.onOptionsItemSelected(item);
     }
 
@@ -184,20 +158,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Override
     protected void onResume() {
         super.onResume();
-        if (animationDrawable != null && !animationDrawable.isRunning()) {
-            // start the animation
-            animationDrawable.start();
-        }
-
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        if (animationDrawable != null && animationDrawable.isRunning()) {
-            // stop the animation
-            animationDrawable.stop();
-        }
     }
 
 

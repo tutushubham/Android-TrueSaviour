@@ -3,17 +3,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:alpha="0.9"
-    android:background="@drawable/wall3"
     android:fitsSystemWindows="true">
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:alpha="0.8"
+        android:background="@drawable/wall3">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+
             android:orientation="vertical"
             android:paddingLeft="24dp"
             android:paddingTop="56dp"
@@ -26,7 +27,6 @@
                 android:layout_margin="@dimen/activity_horizontal_margin"
                 android:src="@drawable/navbar_logo" />
 
-            <!--  Name Label -->
             <com.github.florent37.materialtextfield.MaterialTextField
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -80,6 +80,7 @@
                 android:id="@+id/btn_signup"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:textStyle="bold"
                 android:layout_marginTop="24dp"
                 android:layout_marginBottom="24dp"
                 android:fontFamily="@font/ubuntul"
@@ -93,9 +94,23 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="24dp"
                 android:gravity="center"
+                android:textColor="@color/Light"
                 android:text="Already a member? Login"
-                android:textColor="@color/Crayola"
+                android:textStyle="bold"
                 android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/copyright"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="130dp"
+                android:focusable="true"
+                android:fontFamily="@font/ubuntul"
+                android:gravity="center"
+                android:text="TrueSaviour™ ©"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                android:textStyle="bold" />
 
         </LinearLayout>
     </ScrollView>

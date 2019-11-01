@@ -30,7 +30,7 @@ import java.util.List;
 
 import io.paperdb.Paper;
 
-public class Notif extends Fragment {
+public class Track extends Fragment {
 
 
     // TextView tvLog;
@@ -51,7 +51,7 @@ public class Notif extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_notif, container, false);
+        View view = inflater.inflate(R.layout.fragment_track, container, false);
 
 
         recyclerView = view.findViewById(R.id.my_recycler_view);
@@ -72,7 +72,7 @@ public class Notif extends Fragment {
         ArrayList<ActivityTransitionEventWrapper> events = Paper.book().read("activities", new ArrayList<ActivityTransitionEventWrapper>());
 
 
-        FloatingActionButton fab = view.findViewById(R.id.floatingActionButton);
+        FloatingActionButton fab = view.findViewById(R.id.action_refresh);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
