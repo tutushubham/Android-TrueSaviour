@@ -16,7 +16,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".activites.Wall"></activity>
+        <activity android:name=".activites.WallpaperSelectActivity"></activity>
+        <activity android:name=".activites.WallpaperMainActivity" />
         <activity android:name=".activites.TSbot" />
         <activity
             android:name=".UI.Splash"
@@ -27,8 +28,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ActivityTransitionPage" />
-        <activity android:name=".SelfTest" />
+        <activity android:name=".ActivityTrans.ActivityTransitionPage" />
+        <activity android:name=".activites.SelfTest" />
         <activity
             android:name=".activites.SignUp"
             android:windowSoftInputMode="stateVisible|adjustPan" />
@@ -40,7 +41,7 @@
         <activity android:name=".activites.MainActivity" />
 
         <receiver
-            android:name=".TransitionBroadcastReceiver"
+            android:name=".ActivityTrans.TransitionBroadcastReceiver"
             android:permission="com.google.android.gms.permission.ACTIVITY_RECOGNITION" />
     </application>
 

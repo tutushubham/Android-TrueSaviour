@@ -1,6 +1,7 @@
 package com.vaidik.truesaviour.Adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.vaidik.truesaviour.R;
+import com.vaidik.truesaviour.activites.WallpaperSelectActivity;
 import com.vaidik.truesaviour.models.Category;
 
 import java.util.List;
@@ -67,10 +69,10 @@ public class CategoriesAdapter extends RecyclerView.Adapter<CategoriesAdapter.Ca
             int p = getAdapterPosition();
             Category c = categoryList.get(p);
 
-            /*Intent intent = new Intent(mCtx, WallpapersActivity.class);
+            Intent intent = new Intent(mCtx, WallpaperSelectActivity.class);
             intent.putExtra("category", c.name);
 
-            mCtx.startActivity(intent);*/
+            mCtx.startActivity(intent);
         }
     }
 }

@@ -12,7 +12,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.vaidik.truesaviour.R;
-import com.vaidik.truesaviour.SelfTest;
+import com.vaidik.truesaviour.activites.SelfTest;
 
 
 public class Dashboard extends Fragment {

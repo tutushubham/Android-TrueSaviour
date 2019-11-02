@@ -9,7 +9,6 @@
     tools:context=".activites.TSbot">
 
     <ListView
-        android:id="@+id/messages_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="2"
@@ -18,7 +17,6 @@
 
     <!-- A horizontal line between the chatbox and RecyclerView -->
     <View
-        android:id="@+id/view"
         android:layout_width="0dp"
         android:layout_height="2dp"
         android:background="#dfdfdf"
@@ -38,7 +36,6 @@
         app:layout_constraintRight_toRightOf="parent">
 
         <EditText
-            android:id="@+id/editText"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"

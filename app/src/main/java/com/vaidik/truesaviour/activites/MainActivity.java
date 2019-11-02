@@ -15,8 +15,8 @@ import androidx.appcompat.widget.Toolbar;
 import com.andremion.floatingnavigationview.FloatingNavigationView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
+import com.vaidik.truesaviour.ActivityTrans.Track;
 import com.vaidik.truesaviour.R;
-import com.vaidik.truesaviour.Track;
 import com.vaidik.truesaviour.UI.Dashboard;
 import com.vaidik.truesaviour.UI.Home;
 import com.vaidik.truesaviour.UI.NavFrag;
@@ -102,7 +102,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 startActivity(intent);
                 break;
             case R.id.wall:
-                intent = new Intent(this, Wall.class);
+                intent = new Intent(this, WallpaperMainActivity.class);
                 startActivity(intent);
                 break;
             case R.id.nav_login: //later to be replaced with logout when session started
