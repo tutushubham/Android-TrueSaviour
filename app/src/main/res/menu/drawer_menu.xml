@@ -21,6 +21,10 @@
                 android:icon="@drawable/ic_contact"
                 android:title="Contact Us" />
             <item
+                android:id="@+id/wall"
+                android:icon="@drawable/ic_contact"
+                android:title="Wallpapers" />
+            <item
                 android:id="@+id/nav_login"
                 android:icon="@drawable/ic_login"
                 android:title="Login" />

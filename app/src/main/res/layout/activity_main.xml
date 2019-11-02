@@ -7,11 +7,6 @@
     android:layout_height="match_parent"
     tools:context=".activites.MainActivity">
 
-
-    <include
-        layout="@layout/content_main"
-        app:layout_anchorGravity="top|center" />
-
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
@@ -35,6 +30,21 @@
         app:fabSize="mini"
         app:headerLayout="@layout/nav_header"
         app:menu="@menu/drawer_menu" />
+
+    <include
+        layout="@layout/content_main"
+        app:layout_anchorGravity="top|center" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:background="@color/Dark"
+        android:elevation="4dp"
+        android:foregroundGravity="center"
+        app:menu="@menu/navigation" />
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
