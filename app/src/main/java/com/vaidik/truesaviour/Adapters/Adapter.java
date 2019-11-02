@@ -1,4 +1,4 @@
-package com.vaidik.truesaviour;
+package com.vaidik.truesaviour.Adapters;
 
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -9,6 +9,8 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.vaidik.truesaviour.R;
 
 import java.util.List;
 

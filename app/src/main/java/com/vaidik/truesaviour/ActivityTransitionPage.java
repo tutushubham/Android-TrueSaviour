@@ -24,6 +24,7 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.stone.vega.library.VegaLayoutManager;
+import com.vaidik.truesaviour.Adapters.Adapter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,14 +36,13 @@ public class ActivityTransitionPage extends AppCompatActivity {
     Context context;
     TextView tvLog;
     int[] detectedActivity = new int[]{
-            DetectedActivity.IN_VEHICLE,
-            DetectedActivity.ON_BICYCLE,
-            // DetectedActivity.ON_FOOT,
-            DetectedActivity.RUNNING,
             DetectedActivity.STILL,
-            // DetectedActivity.TILTING,
-            // DetectedActivity.UNKNOWN,
-            DetectedActivity.WALKING};
+            DetectedActivity.WALKING,
+            DetectedActivity.RUNNING,
+            DetectedActivity.ON_BICYCLE,
+            DetectedActivity.IN_VEHICLE,
+    };
+
     private RecyclerView recyclerView;
     private RecyclerView.Adapter mAdapter;
 

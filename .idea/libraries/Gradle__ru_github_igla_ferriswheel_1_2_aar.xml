@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="Gradle: ru.github.igla:ferriswheel:1.2@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d002e68da7639912dc39acd7b2a2e844/ferriswheel-1.2/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d002e68da7639912dc39acd7b2a2e844/ferriswheel-1.2/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d2866a9c2a1bdc2ee19bb882003bc3d8/ferriswheel-1.2/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d2866a9c2a1bdc2ee19bb882003bc3d8/ferriswheel-1.2/res" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/ru.github.igla/ferriswheel/1.2/25d809a4b012085090574605b278a7ea68e446b7/ferriswheel-1.2-javadoc.jar!/" />

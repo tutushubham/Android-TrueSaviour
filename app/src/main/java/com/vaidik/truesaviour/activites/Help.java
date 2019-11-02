@@ -20,7 +20,7 @@ import com.sothree.slidinguppanel.SlidingUpPanelLayout;
 import com.sothree.slidinguppanel.SlidingUpPanelLayout.PanelSlideListener;
 import com.sothree.slidinguppanel.SlidingUpPanelLayout.PanelState;
 import com.stone.vega.library.VegaLayoutManager;
-import com.vaidik.truesaviour.Adapter;
+import com.vaidik.truesaviour.Adapters.Adapter;
 import com.vaidik.truesaviour.R;
 
 import java.util.Arrays;

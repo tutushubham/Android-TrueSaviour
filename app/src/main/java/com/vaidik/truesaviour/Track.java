@@ -24,6 +24,7 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.stone.vega.library.VegaLayoutManager;
+import com.vaidik.truesaviour.Adapters.Adapter;
 
 import java.util.ArrayList;
 import java.util.List;
