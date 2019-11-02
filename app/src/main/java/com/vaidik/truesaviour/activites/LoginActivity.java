@@ -104,10 +104,10 @@ public class LoginActivity extends AppCompatActivity {
 
                 LoginResponse loginResponse = response.body();
 
-                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                startActivity(intent);
+                /*Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                startActivity(intent);*/
 
-                /*if (loginResponse.getMessage().equals("login successful")) {
+                if (loginResponse.getMessage().equals("login successful.")) {
 
                     Toast.makeText(LoginActivity.this, loginResponse.getMessage(), Toast.LENGTH_LONG).show();
                     Log.e("Response: ", loginResponse.getMessage());
@@ -117,7 +117,7 @@ public class LoginActivity extends AppCompatActivity {
 
                 } else {
                     Toast.makeText(LoginActivity.this, "faileeddddddd", Toast.LENGTH_LONG).show();
-                }*/
+                }
 
             }
 
@@ -132,6 +132,7 @@ public class LoginActivity extends AppCompatActivity {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == REQUEST_SIGNUP) {
             if (resultCode == RESULT_OK) {
 
