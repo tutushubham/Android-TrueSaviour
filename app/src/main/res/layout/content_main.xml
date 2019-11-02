@@ -22,7 +22,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:background="@color/Dark"
+        app:itemIconTint="@color/Pop"
+        app:itemTextColor="@color/Pop"
         android:elevation="4dp"
         android:foregroundGravity="center"
         app:menu="@menu/navigation" />

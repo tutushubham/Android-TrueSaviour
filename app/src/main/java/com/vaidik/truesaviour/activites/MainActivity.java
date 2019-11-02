@@ -101,6 +101,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 intent.putExtra("page", "contact");
                 startActivity(intent);
                 break;
+            case R.id.wall:
+                intent = new Intent(this, Wall.class);
+                startActivity(intent);
+                break;
             case R.id.nav_login: //later to be replaced with logout when session started
                 intent = new Intent(this, LoginActivity.class);
                 startActivity(intent);
