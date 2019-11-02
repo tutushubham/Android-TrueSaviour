@@ -42,7 +42,7 @@ public class Wall extends AppCompatActivity implements BottomNavigationView.OnNa
                 fragment = new FavouritesFragment();
                 break;
             case R.id.navigation_set:
-                //fragment = new SettingsFragment();
+                //fragment = new SettingsFragment(); later fixed
                 break;
             default:
                 fragment = new WallpaperHome();
