@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ScrollView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -36,15 +35,10 @@ public class Track extends Fragment {
     private int[] detectedActivity = new int[]{
             DetectedActivity.IN_VEHICLE,
             DetectedActivity.ON_BICYCLE,
-            // DetectedActivity.ON_FOOT,
             DetectedActivity.RUNNING,
             DetectedActivity.STILL,
-            // DetectedActivity.TILTING,
-            // DetectedActivity.UNKNOWN,
             DetectedActivity.WALKING};
     private RecyclerView recyclerView;
-    ScrollView sc;
-
 
 
     @Nullable
@@ -65,7 +59,7 @@ public class Track extends Fragment {
         List<ActivityTransition> transitions = getTransitionActivityList();
         ActivityTransitionRequest request = new ActivityTransitionRequest(transitions);
 
-        startGetBroadcast(pendingIntentBroadcast, request, "pendingIntentBroadcast");
+        startGetBroadcast(pendingIntentBroadcast, request);
 
         refresh();
         ArrayList<ActivityTransitionEventWrapper> events = Paper.book().read("activities", new ArrayList<>());
@@ -104,7 +98,7 @@ public class Track extends Fragment {
     }
 
 
-    private void startGetBroadcast(PendingIntent pendingIntent, ActivityTransitionRequest request, final String type) {
+    private void startGetBroadcast(PendingIntent pendingIntent, ActivityTransitionRequest request) {
         // myPendingIntent is the instance of PendingIntent where the app receives callbacks.
         Task<Void> task = ActivityRecognition.getClient(getContext()).requestActivityTransitionUpdates(request, pendingIntent);
         task.addOnSuccessListener(result -> Toast.makeText(getContext(), "Waiting for Activity Transitions...", Toast.LENGTH_LONG).show());

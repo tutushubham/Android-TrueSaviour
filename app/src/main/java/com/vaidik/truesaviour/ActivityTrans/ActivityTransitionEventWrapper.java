@@ -13,8 +13,8 @@ import static com.google.android.gms.location.ActivityTransition.ACTIVITY_TRANSI
 
 public class ActivityTransitionEventWrapper {
 
-    static HashMap<Integer, String> activityTypeMap = new HashMap<>();
-    static HashMap<Integer, String> transitionTypeMap = new HashMap<>();
+    private static HashMap<Integer, String> activityTypeMap = new HashMap<>();
+    private static HashMap<Integer, String> transitionTypeMap = new HashMap<>();
     ActivityTransitionEvent event;
     long timestamp = 0;
 

@@ -70,12 +70,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         tv_user_id_display = headerView.findViewById(R.id.user_id_display);
         tv_user_id_display.setText(session.getUsername());
         mFloatingNavigationView.setNavigationItemSelectedListener(this);
-        mFloatingNavigationView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                mFloatingNavigationView.open();
-            }
-        });
+        mFloatingNavigationView.setOnClickListener(view -> mFloatingNavigationView.open());
 
 
         navigation = findViewById(R.id.navigationMain);
