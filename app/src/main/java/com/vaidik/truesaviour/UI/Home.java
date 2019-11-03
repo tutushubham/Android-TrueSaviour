@@ -28,21 +28,15 @@ public class Home extends Fragment {
         Button talkNow = view.findViewById(R.id.talkNow);
 
 
-        getStarted.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getContext(), LoginActivity.class);
-                startActivity(intent);
-            }
+        getStarted.setOnClickListener(v -> {
+            Intent intent = new Intent(getContext(), LoginActivity.class);
+            startActivity(intent);
         });
 
-        talkNow.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getContext(), NavFrag.class);
-                intent.putExtra("page", "chat");
-                startActivity(intent);
-            }
+        talkNow.setOnClickListener(v -> {
+            Intent intent = new Intent(getContext(), NavFrag.class);
+            intent.putExtra("page", "chat");
+            startActivity(intent);
         });
 
 

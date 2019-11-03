@@ -22,7 +22,7 @@ public class WallpaperMainActivity extends AppCompatActivity implements BottomNa
         setContentView(R.layout.activity_wall);
 
         bottomNavigationView = findViewById(R.id.navigationWall);
-        bottomNavigationView.setOnNavigationItemSelectedListener(this);
+        bottomNavigationView.setOnNavigationItemSelectedListener(WallpaperMainActivity.this);
 
         displayFragment(new WallpaperHomeFragment());
     }

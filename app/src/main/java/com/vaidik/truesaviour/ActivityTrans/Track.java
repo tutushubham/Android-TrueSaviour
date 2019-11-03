@@ -18,9 +18,6 @@ import com.google.android.gms.location.ActivityRecognition;
 import com.google.android.gms.location.ActivityTransition;
 import com.google.android.gms.location.ActivityTransitionRequest;
 import com.google.android.gms.location.DetectedActivity;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.stone.vega.library.VegaLayoutManager;
@@ -71,25 +68,22 @@ public class Track extends Fragment {
         startGetBroadcast(pendingIntentBroadcast, request, "pendingIntentBroadcast");
 
         refresh();
-        ArrayList<ActivityTransitionEventWrapper> events = Paper.book().read("activities", new ArrayList<ActivityTransitionEventWrapper>());
+        ArrayList<ActivityTransitionEventWrapper> events = Paper.book().read("activities", new ArrayList<>());
 
 
         FloatingActionButton fab = view.findViewById(R.id.action_refresh);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                refresh();
-                recyclerView.scrollToPosition(0);
-                Toast.makeText(getContext(), " Refreshing...", Toast.LENGTH_LONG).show();
+        fab.setOnClickListener(view1 -> {
+            refresh();
+            recyclerView.scrollToPosition(0);
+            Toast.makeText(getContext(), " Refreshing...", Toast.LENGTH_LONG).show();
 
-            }
         });
 
         return view;
     }
 
     private void refresh() {
-        ArrayList<ActivityTransitionEventWrapper> events = Paper.book().read("activities", new ArrayList<ActivityTransitionEventWrapper>());
+        ArrayList<ActivityTransitionEventWrapper> events = Paper.book().read("activities", new ArrayList<>());
         List<String> inputActi = new ArrayList<>();
         List<String> inputTimei = new ArrayList<>();
         List<String> inputTransi = new ArrayList<>();
@@ -113,24 +107,11 @@ public class Track extends Fragment {
     private void startGetBroadcast(PendingIntent pendingIntent, ActivityTransitionRequest request, final String type) {
         // myPendingIntent is the instance of PendingIntent where the app receives callbacks.
         Task<Void> task = ActivityRecognition.getClient(getContext()).requestActivityTransitionUpdates(request, pendingIntent);
-        task.addOnSuccessListener(new OnSuccessListener<Void>() {
-            @Override
-            public void onSuccess(Void result) {
-                Toast.makeText(getContext(), "Waiting for Activity Transitions...", Toast.LENGTH_LONG).show();
-            }
+        task.addOnSuccessListener(result -> Toast.makeText(getContext(), "Waiting for Activity Transitions...", Toast.LENGTH_LONG).show());
+        task.addOnCompleteListener(task1 -> {
+            //Toast.makeText(context, "on complete " + type, Toast.LENGTH_SHORT).show();
         });
-        task.addOnCompleteListener(new OnCompleteListener<Void>() {
-            @Override
-            public void onComplete(@NonNull Task<Void> task) {
-                //Toast.makeText(context, "oncomplete " + type, Toast.LENGTH_SHORT).show();
-            }
-        });
-        task.addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(Exception e) {
-                Toast.makeText(getContext(), "Error : " + e.toString(), Toast.LENGTH_LONG).show();
-            }
-        });
+        task.addOnFailureListener(e -> Toast.makeText(getContext(), "Error : " + e.toString(), Toast.LENGTH_LONG).show());
     }
 
     private List<ActivityTransition> getTransitionActivityList() {

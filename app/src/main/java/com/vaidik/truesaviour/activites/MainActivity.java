@@ -2,6 +2,7 @@ package com.vaidik.truesaviour.activites;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -32,28 +33,24 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     Intent intent;
 
     FloatingNavigationView mFloatingNavigationView;
-    private Session session;
-
-    //bottom
-    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
-            = new BottomNavigationView.OnNavigationItemSelectedListener() {
-
-        @Override
-        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-            switch (item.getItemId()) {
-                case R.id.navigation_home:
-                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Home()).commit();
-                    return true;
-                case R.id.navigation_dashboard:
-                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Dashboard()).commit();
-                    return true;
-                case R.id.navigation_notifications:
-                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Track()).commit();
-                    return true;
-            }
-            return false;
+    public BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
+            = item -> {
+        switch (item.getItemId()) {
+            case R.id.navigation_home:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Home()).commit();
+                return true;
+            case R.id.navigation_dashboard:
+                Log.e("second frag", "self test");
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Dashboard()).commit();
+                return true;
+            case R.id.navigation_notifications:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Track()).commit();
+                return true;
         }
+        return false;
     };
+    private Session session;
+    BottomNavigationView navigation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,7 +78,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         });
 
 
-        BottomNavigationView navigation = findViewById(R.id.navigation);
+        navigation = findViewById(R.id.navigationMain);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Home()).commit();
 
