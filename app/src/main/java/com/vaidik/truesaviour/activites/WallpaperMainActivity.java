@@ -42,7 +42,7 @@ public class WallpaperMainActivity extends AppCompatActivity implements BottomNa
                 fragment = new FavouritesFragment();
                 break;
             case R.id.navigation_set:
-                //fragment = new SettingsFragment(); later fixed
+                fragment = new FavouritesFragment();
                 break;
             default:
                 fragment = new WallpaperHomeFragment();

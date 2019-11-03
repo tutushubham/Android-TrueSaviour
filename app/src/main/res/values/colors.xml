@@ -2,9 +2,9 @@
 <resources>
 
     <color name="Buttoncol">#00B2FF</color>
-    <color name="Light">#BFF3CF</color>
+    <color name="Light">#C8ECFF</color>
     <color name="Dark">#5ff3ff</color>
-    <color name="Pop">#0023E4</color>
+    <color name="Pop">#2C50FF</color>
 
 
 </resources>

@@ -22,15 +22,15 @@
                 android:title="Contact Us" />
             <item
                 android:id="@+id/wall"
-                android:icon="@drawable/ic_contact"
+                android:icon="@drawable/ic_smile"
                 android:title="Wallpapers" />
             <item
                 android:id="@+id/nav_login"
-                android:icon="@drawable/ic_login"
+                android:icon="@drawable/ic_signin"
                 android:title="Login" />
             <item
                 android:id="@+id/nav_signout"
-                android:icon="@drawable/ic_action_user_add"
+                android:icon="@drawable/ic_signout"
                 android:title="Sign Out" />
         </menu>
     </item>
