@@ -15,8 +15,8 @@ public class ActivityTransitionEventWrapper {
 
     private static HashMap<Integer, String> activityTypeMap = new HashMap<>();
     private static HashMap<Integer, String> transitionTypeMap = new HashMap<>();
-    ActivityTransitionEvent event;
-    long timestamp = 0;
+    private ActivityTransitionEvent event;
+    private long timestamp = 0;
 
     public ActivityTransitionEventWrapper(ActivityTransitionEvent event) {
         this.event = event;
@@ -42,7 +42,7 @@ public class ActivityTransitionEventWrapper {
         return transitionTypeMap.get(type);
     }
 
-    String getEventDisplayFormat() {
+    public String getEventDisplayFormat() {
         String datetime = convertTime(timestamp);
         String text = datetime + "\n";
         text += getActivityTypeDesc(event.getActivityType()) + "\n";
@@ -51,7 +51,7 @@ public class ActivityTransitionEventWrapper {
         return text;
     }
 
-    String getEventName() {
+    public String getEventName() {
         // String datetime = convertTime(timestamp);
         // String text = datetime + "\n";
         //text += getTransitionTypeDesc(event.getTransitionType()) + "\n";
@@ -59,7 +59,7 @@ public class ActivityTransitionEventWrapper {
         return getActivityTypeDesc(event.getActivityType());
     }
 
-    String getTransitionName() {
+    public String getTransitionName() {
         // String datetime = convertTime(timestamp);
         //String text = datetime + "\n";
         //text = getActivityTypeDesc(event.getActivityType()) + "\n";
@@ -67,14 +67,14 @@ public class ActivityTransitionEventWrapper {
         return getTransitionTypeDesc(event.getTransitionType());
     }
 
-    String getEventTime() {
+    public String getEventTime() {
         //text = getActivityTypeDesc(event.getActivityType()) + "\n";
         //String text = getTransitionTypeDesc(event.getTransitionType()) + "\n";
         // text += event.getElapsedRealTimeNanos() +"\n";
         return convertTime(timestamp);
     }
 
-    public String convertTime(long time) {
+    private String convertTime(long time) {
         Date date = new Date(time);
         Format format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         return format.format(date);

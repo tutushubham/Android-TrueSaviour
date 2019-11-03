@@ -28,7 +28,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ActivityTrans.ActivityTransitionPage" />
         <activity android:name=".activites.SelfTest" />
         <activity
             android:name=".activites.SignUp"
