@@ -40,7 +40,7 @@ public class About extends Fragment {
                 .addItem(adsElement)
                 .addGroup("Connect with us")
                 .addEmail("tutushubham@gmail.com")
-                .addWebsite("https://www.linkedin.com/in/shubham-bhattacharyya-0b1380117/")
+                .addWebsite("https://www.linkedin.com/in/tutushubham/")
                 .addFacebook("vaidik.tech")
                 .addTwitter("tutushubham")
                 .addYoutube("user/tutushubham")
@@ -62,12 +62,7 @@ public class About extends Fragment {
         copyRightsElement.setIconTint(mehdi.sakout.aboutpage.R.color.about_item_icon_color);
         copyRightsElement.setIconNightTint(android.R.color.white);
         copyRightsElement.setGravity(Gravity.CENTER);
-        copyRightsElement.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(getContext(), copyrights, Toast.LENGTH_SHORT).show();
-            }
-        });
+        copyRightsElement.setOnClickListener(v -> Toast.makeText(getContext(), copyrights, Toast.LENGTH_SHORT).show());
         return copyRightsElement;
     }
 

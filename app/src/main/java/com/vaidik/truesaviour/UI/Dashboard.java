@@ -20,7 +20,7 @@ public class Dashboard extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_dash, container, false);
+        View view = inflater.inflate(R.layout.fragment_selftest, container, false);
 
 
         Button selfTest = view.findViewById(R.id.startTest);

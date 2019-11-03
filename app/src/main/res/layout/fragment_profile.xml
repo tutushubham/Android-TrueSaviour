@@ -121,16 +121,18 @@
                 android:focusable="true"
                 android:text="free/premium user" />
 
-            <TextView
-                android:layout_width="fill_parent"
+            <Button
+                android:id="@+id/accountUpgrade"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:background="#fff"
                 android:fontFamily="@font/ubuntul"
-                android:elevation="4dp"
-                android:padding="20dp"
-                android:focusable="true"
-                android:text="upgrade account" />
+                android:layout_below="@id/img2"
+                android:layout_margin="16dp"
+                android:background="@color/Buttoncol"
+                android:text="Upgrade Account"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
         </LinearLayout>
     </RelativeLayout>
 </ScrollView>

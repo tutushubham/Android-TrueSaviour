@@ -9,18 +9,19 @@
     android:padding="16dp">
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_gravity="end"
+        android:layout_marginRight="35dp"
         android:contentDescription="DP"
-        android:src="@drawable/ic_profile" />
+        android:src="@drawable/icon" />
 
     <TextView
         android:id="@+id/user_id_display"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/ubuntul"
-        android:paddingTop="8dp"
+        android:padding="8dp"
         android:textColor="@android:color/black"
         android:text="@string/username"
         android:textStyle="bold"
@@ -30,6 +31,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@android:color/black"
+        android:padding="8dp"
         android:fontFamily="@font/ubuntul"
         android:text="@string/user_email"
         android:textStyle="bold" />
