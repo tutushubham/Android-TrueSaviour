@@ -7,6 +7,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,16 +21,18 @@ import com.vaidik.truesaviour.R;
 import com.vaidik.truesaviour.UI.Dashboard;
 import com.vaidik.truesaviour.UI.Home;
 import com.vaidik.truesaviour.UI.NavFrag;
+import com.vaidik.truesaviour.Utils.Session;
 
 import java.util.Objects;
 
 import io.paperdb.Paper;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
-
+    TextView tv_user_id_display;
     Intent intent;
 
     FloatingNavigationView mFloatingNavigationView;
+    private Session session;
 
     //bottom
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
@@ -59,12 +62,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        session = new Session(MainActivity.this);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         Objects.requireNonNull(getSupportActionBar()).setDisplayShowTitleEnabled(false);
 
         mFloatingNavigationView = findViewById(R.id.nav_view);
+        View headerView = mFloatingNavigationView.getHeaderView(0);
+        tv_user_id_display = headerView.findViewById(R.id.user_id_display);
+        tv_user_id_display.setText(session.getUsername());
         mFloatingNavigationView.setNavigationItemSelectedListener(this);
         mFloatingNavigationView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -108,10 +115,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.nav_login: //later to be replaced with logout when session started
                 intent = new Intent(this, LoginActivity.class);
                 startActivity(intent);
+                finish();
                 break;
-            case R.id.nav_signup: //later to be replaced with some other feature
-                intent = new Intent(this, SignUp.class);
+            case R.id.nav_signout: //later to be replaced with some other feature
+                new Session(this).clearSession();
+                intent = new Intent(this, LoginActivity.class);
                 startActivity(intent);
+                finish();
                 break;
         }
 

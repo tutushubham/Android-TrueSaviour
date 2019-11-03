@@ -14,6 +14,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.vaidik.truesaviour.API.RetrofitClient;
 import com.vaidik.truesaviour.R;
+import com.vaidik.truesaviour.Utils.Session;
+import com.vaidik.truesaviour.Utils.StringUtils;
 import com.vaidik.truesaviour.models.LoginResponse;
 
 import nl.dionsegijn.konfetti.KonfettiView;
@@ -27,7 +29,7 @@ import retrofit2.Response;
 public class LoginActivity extends AppCompatActivity {
     private static final String TAG = "LoginActivity";
     private static final int REQUEST_SIGNUP = 0;
-
+    private Session session;
     EditText _idText;
     EditText _passwordText;
     Button _loginButton;
@@ -36,53 +38,61 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        session = new Session(LoginActivity.this);
 
-        _idText = findViewById(R.id.input_id);
-        _passwordText = findViewById(R.id.input_password);
-        _loginButton = findViewById(R.id.btn_login);
-        _signupLink = findViewById(R.id.link_signup);
+        if (session.getUsername().equals(StringUtils.INVALID_SESSION)) {
 
 
-        final KonfettiView konfettiView = findViewById(R.id.viewKonfetti);
-        _loginButton.setOnClickListener(new View.OnClickListener() {
+            setContentView(R.layout.activity_login);
 
-            @Override
-            public void onClick(View v) {
-                konfettiView.build()
-                        .addColors(Color.YELLOW, Color.GREEN, Color.MAGENTA)
-                        .setDirection(0.0, 359.0)
-                        .setSpeed(1f, 5f)
-                        .setFadeOutEnabled(true)
-                        .setTimeToLive(2000L)
-                        .addShapes(Shape.RECT, Shape.CIRCLE)
-                        .addSizes(new Size(12, 5f))
-                        .setPosition(-50f, konfettiView.getWidth() + 50f, -50f, -50f)
-                        .streamFor(300, 5000L);
-                login();
-            }
-        });
-
-        _signupLink.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                // Start the Signup activity
-                Intent intent = new Intent(getApplicationContext(), SignUp.class);
-                startActivityForResult(intent, REQUEST_SIGNUP);
-            }
-        });
+            _idText = findViewById(R.id.input_id);
+            _passwordText = findViewById(R.id.input_password);
+            _loginButton = findViewById(R.id.btn_login);
+            _signupLink = findViewById(R.id.link_signup);
 
 
+            final KonfettiView konfettiView = findViewById(R.id.viewKonfetti);
+            _loginButton.setOnClickListener(new View.OnClickListener() {
+
+                @Override
+                public void onClick(View v) {
+                    konfettiView.build()
+                            .addColors(Color.YELLOW, Color.GREEN, Color.MAGENTA)
+                            .setDirection(0.0, 359.0)
+                            .setSpeed(1f, 5f)
+                            .setFadeOutEnabled(true)
+                            .setTimeToLive(2000L)
+                            .addShapes(Shape.RECT, Shape.CIRCLE)
+                            .addSizes(new Size(12, 5f))
+                            .setPosition(-50f, konfettiView.getWidth() + 50f, -50f, -50f)
+                            .streamFor(300, 5000L);
+                    login();
+                }
+            });
+
+            _signupLink.setOnClickListener(new View.OnClickListener() {
+
+                @Override
+                public void onClick(View v) {
+                    // Start the Signup activity
+                    Intent intent = new Intent(getApplicationContext(), SignUp.class);
+                    startActivityForResult(intent, REQUEST_SIGNUP);
+                }
+            });
+
+        } else {
+            launchSucceedingActivity();
+        }
     }
 
     public void login() {
         Log.d(TAG, "Login");
 
         if (!validate()) {
-            onLoginFailed();
+
             return;
         }
+
 
         _loginButton.setEnabled(false);
 
@@ -104,26 +114,28 @@ public class LoginActivity extends AppCompatActivity {
 
                 LoginResponse loginResponse = response.body();
 
+
                 /*Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                 startActivity(intent);*/
 
                 if (loginResponse.getMessage().equals("login successful.")) {
 
-                    Toast.makeText(LoginActivity.this, loginResponse.getMessage(), Toast.LENGTH_LONG).show();
-                    Log.e("Response: ", loginResponse.getMessage());
-                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                    startActivity(intent);
+                    Toast.makeText(LoginActivity.this, StringUtils.LOGIN_SUCCESSFUL, Toast.LENGTH_LONG).show();
+                    Log.e(StringUtils.RESPONSE, loginResponse.getMessage());
+                    session.setUsername(id);
+                    launchSucceedingActivity();
 
 
                 } else {
-                    Toast.makeText(LoginActivity.this, "faileeddddddd", Toast.LENGTH_LONG).show();
+                    // Toast.makeText(LoginActivity.this, LOGIN_FAILED, Toast.LENGTH_LONG).show();
+                    onLoginFailed();
                 }
 
             }
 
             @Override
             public void onFailure(Call<LoginResponse> call, Throwable t) {
-                Log.e("Response: ", "failure");
+                Log.e(StringUtils.RESPONSE, StringUtils.FAILURE);
             }
         });
 
@@ -150,7 +162,7 @@ public class LoginActivity extends AppCompatActivity {
 
 
     public void onLoginFailed() {
-        Toast.makeText(getBaseContext(), "Login failed", Toast.LENGTH_LONG).show();
+        Toast.makeText(getBaseContext(), StringUtils.LOGIN_FAILED, Toast.LENGTH_LONG).show();
 
         _loginButton.setEnabled(true);
     }
@@ -162,20 +174,26 @@ public class LoginActivity extends AppCompatActivity {
         String password = _passwordText.getText().toString();
 
         if (id.isEmpty() || id.length() < 3) {
-            _idText.setError("at least 3 characters");
+            _idText.setError(StringUtils.USER_ID_CHARACTER_LENGTH_CHECK);
             valid = false;
         } else {
             _idText.setError(null);
         }
 
         if (password.isEmpty() || password.length() < 4) {
-            _passwordText.setError("between 4 and 10 alphanumeric characters");
+            _passwordText.setError(StringUtils.USER_ID_PASSWORD_RESTRICTIONS_CHECK);
             valid = false;
         } else {
             _passwordText.setError(null);
         }
 
         return valid;
+    }
+
+    public void launchSucceedingActivity() {
+        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+        startActivity(intent);
+        finish();
     }
 
 }

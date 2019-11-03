@@ -2,6 +2,7 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="176dp"
+    android:id="@+id/ll_nav_header"
     android:orientation="vertical"
     android:background="@color/Dark"
     android:gravity="bottom"
@@ -15,6 +16,7 @@
         android:src="@drawable/ic_profile" />
 
     <TextView
+        android:id="@+id/user_id_display"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/ubuntul"

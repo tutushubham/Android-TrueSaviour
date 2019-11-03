@@ -1,4 +1,4 @@
-package com.vaidik.truesaviour.activites;
+package com.vaidik.truesaviour.Fragments;
 
 import android.content.res.Configuration;
 import android.os.Bundle;

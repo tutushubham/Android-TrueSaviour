@@ -5,10 +5,10 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.vaidik.truesaviour.Fragments.About;
+import com.vaidik.truesaviour.Fragments.ContactUs;
+import com.vaidik.truesaviour.Fragments.Help;
 import com.vaidik.truesaviour.R;
-import com.vaidik.truesaviour.activites.About;
-import com.vaidik.truesaviour.activites.ContactUs;
-import com.vaidik.truesaviour.activites.Help;
 
 public class NavFrag extends AppCompatActivity {
 

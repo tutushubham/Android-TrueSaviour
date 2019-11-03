@@ -25,6 +25,7 @@
                 android:layout_margin="@dimen/activity_horizontal_margin"
                 android:src="@drawable/navbar_logo" />
 
+
             <!-- Email Label -->
             <com.github.florent37.materialtextfield.MaterialTextField
                 android:layout_width="match_parent"
@@ -44,6 +45,8 @@
             </com.github.florent37.materialtextfield.MaterialTextField>
 
             <!-- Password Label -->
+
+
             <com.github.florent37.materialtextfield.MaterialTextField
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
