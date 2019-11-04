@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.vaidik.truesaviour.R;
 import com.vaidik.truesaviour.wallpaper.FavouritesFragment;
+import com.vaidik.truesaviour.wallpaper.SettingsWallFragment;
 import com.vaidik.truesaviour.wallpaper.WallpaperHomeFragment;
 
 public class WallpaperMainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
@@ -42,7 +43,7 @@ public class WallpaperMainActivity extends AppCompatActivity implements BottomNa
                 fragment = new FavouritesFragment();
                 break;
             case R.id.navigation_set:
-                fragment = new FavouritesFragment();
+                fragment = new SettingsWallFragment();
                 break;
             default:
                 fragment = new WallpaperHomeFragment();

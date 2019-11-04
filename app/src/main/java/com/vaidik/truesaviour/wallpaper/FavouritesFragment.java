@@ -15,7 +15,7 @@ public class FavouritesFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_favourites, container, false);
+        return inflater.inflate(R.layout.fragment_wallpaper_favourites, container, false);
     }
 
 }
