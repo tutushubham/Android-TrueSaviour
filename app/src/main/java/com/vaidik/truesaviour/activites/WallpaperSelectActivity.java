@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -47,7 +48,7 @@ public class WallpaperSelectActivity extends AppCompatActivity {
         dbWallpapers = FirebaseDatabase.getInstance().getReference("images")
                 .child(category);
 
-        /*if (FirebaseAuth.getInstance().getCurrentUser() != null) {
+        if (FirebaseAuth.getInstance().getCurrentUser() != null) {
             dbFavs = FirebaseDatabase.getInstance().getReference("users")
                     .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
                     .child("favourites")
@@ -55,7 +56,7 @@ public class WallpaperSelectActivity extends AppCompatActivity {
             fetchFavWallpapers(category);
         } else {
             fetchWallpapers(category);
-        }*/
+        }
         fetchWallpapers(category);
     }
 
