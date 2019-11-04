@@ -47,6 +47,8 @@ public class SettingsWallFragment extends Fragment {
         GoogleSignInOptions gso =
                 new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                         .requestIdToken(getString(R.string.default_web_client_id))
+                        .requestEmail()
+                        .requestProfile()
                         .build();
         mGoogleSignInClient = GoogleSignIn.getClient(getActivity(), gso);
 
