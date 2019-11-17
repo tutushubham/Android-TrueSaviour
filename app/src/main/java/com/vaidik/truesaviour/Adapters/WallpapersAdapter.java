@@ -110,6 +110,7 @@ public class WallpapersAdapter extends RecyclerView.Adapter<WallpapersAdapter.Wa
 
                     downloadWallpaper(wallpaperList.get(getAdapterPosition()));
 
+
                     break;
 
             }
@@ -166,12 +167,17 @@ public class WallpapersAdapter extends RecyclerView.Adapter<WallpapersAdapter.Wa
 
 
                                   Intent intent = new Intent(Intent.ACTION_VIEW);
-
+                                  //Intent intent = new Intent(Intent.ACTION_ATTACH_DATA);
                                   Uri uri = saveWallpaperAndGetUri(resource, wallpaper.id);
 
                                   if (uri != null) {
                                       intent.setDataAndType(uri, "image/*");
                                       mCtx.startActivity(Intent.createChooser(intent, "Wallpapers Hub"));
+
+                                      /*intent.addCategory(Intent.CATEGORY_DEFAULT);
+                                      intent.setDataAndType(uri, "image/jpeg");
+                                      intent.putExtra("mimeType", "image/jpeg");
+                                      mCtx.startActivity(Intent.createChooser(intent, "Set as:"));*/
                                   }
                               }
                           }

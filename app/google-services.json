@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "1026808787258",
-    "firebase_url": "https://wallpaperapp-e686e.firebaseio.com",
-    "project_id": "wallpaperapp-e686e",
-    "storage_bucket": "wallpaperapp-e686e.appspot.com"
+    "project_number": "554009072490",
+    "firebase_url": "https://truesaviour-vaidik.firebaseio.com",
+    "project_id": "truesaviour-vaidik",
+    "storage_bucket": "truesaviour-vaidik.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1026808787258:android:1e998c17effb4fa410e003",
+        "mobilesdk_app_id": "1:554009072490:android:c01a936e20431a99460b13",
         "android_client_info": {
           "package_name": "com.vaidik.truesaviour"
         }
       },
       "oauth_client": [
         {
-          "client_id": "1026808787258-ttim1pph48rig01rl6uh85v9v6fm07ge.apps.googleusercontent.com",
+          "client_id": "554009072490-51823opbcguof33kospnqp8j24du5rpl.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.vaidik.truesaviour",
@@ -23,20 +23,20 @@
           }
         },
         {
-          "client_id": "1026808787258-l4ncokcabsngb7q8r7u09auucqbtv9us.apps.googleusercontent.com",
+          "client_id": "554009072490-umsr5fgeigr91rgpm28ut23igpr0k18j.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBhTmUjqfmREc8CUIKwZJPYglotNRksvn4"
+          "current_key": "AIzaSyAeHzI0IcxEcVeCDLp89ph2jYiOOtuoekQ"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "1026808787258-l4ncokcabsngb7q8r7u09auucqbtv9us.apps.googleusercontent.com",
+              "client_id": "554009072490-umsr5fgeigr91rgpm28ut23igpr0k18j.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

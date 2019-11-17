@@ -84,6 +84,7 @@ public class LoginActivity extends AppCompatActivity {
         }
 
 
+
     }
 
     public void login() {
@@ -166,7 +167,7 @@ public class LoginActivity extends AppCompatActivity {
                 firebaseAuthWithGoogle(account);
             } catch (ApiException e) {
                 e.printStackTrace();
-                Toast.makeText(this, e.getMessage(), Toast.LENGTH_LONG).show();
+                Toast.makeText(this, e.getMessage() + " check network connection.", Toast.LENGTH_LONG).show();
             }
         }
     }

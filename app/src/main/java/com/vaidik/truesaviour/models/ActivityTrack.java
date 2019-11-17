@@ -2,11 +2,11 @@ package com.vaidik.truesaviour.models;
 
 public class ActivityTrack {
 
-    String email;
     private String actName;
     private String actTime;
     private String actState;
     private String actID;
+    String email;
 
     public ActivityTrack() {
 
@@ -24,10 +24,6 @@ public class ActivityTrack {
         return actName;
     }
 
-    public void setActName(String actName) {
-        this.actName = actName;
-    }
-
     public String getActID() {
         return actID;
     }
@@ -40,12 +36,16 @@ public class ActivityTrack {
         return actTime;
     }
 
-    public void setActTime(String actTime) {
-        this.actTime = actTime;
-    }
-
     public String getActState() {
         return actState;
+    }
+
+    public void setActName(String actName) {
+        this.actName = actName;
+    }
+
+    public void setActTime(String actTime) {
+        this.actTime = actTime;
     }
 
     public void setActState(String actState) {

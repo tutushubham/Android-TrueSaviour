@@ -35,7 +35,6 @@ import io.paperdb.Paper;
 
 public class TrackAct extends AppCompatActivity {
 
-    DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Activites");
     private int[] detectedActivity = new int[]{
             DetectedActivity.IN_VEHICLE,
             DetectedActivity.ON_BICYCLE,
@@ -43,6 +42,7 @@ public class TrackAct extends AppCompatActivity {
             DetectedActivity.STILL,
             DetectedActivity.WALKING};
     private RecyclerView recyclerView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,6 +74,8 @@ public class TrackAct extends AppCompatActivity {
         });
 
     }
+
+    DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Activites");
 
     private void refresh(ArrayList<ActivityTransitionEventWrapper> events) {
         //ArrayList<ActivityTransitionEventWrapper> events = Paper.book().read("activities", new ArrayList<>());
@@ -111,12 +113,13 @@ public class TrackAct extends AppCompatActivity {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 for (DataSnapshot snap : dataSnapshot.getChildren()) {
                     ActivityTrack retAct = snap.getValue(ActivityTrack.class);
-                    inputActi.add(retAct.getActName());
-                    inputTimei.add(retAct.getActTime());
-                    inputTransi.add(retAct.getActState());
+                    if (retAct.getEmail().equalsIgnoreCase(user.getEmail())) {
+                        inputActi.add(retAct.getActName());
+                        inputTimei.add(retAct.getActTime());
+                        inputTransi.add(retAct.getActState());
+                    }
                 }
             }
-
             @Override
             public void onCancelled(DatabaseError databaseError) {
             }
