@@ -166,18 +166,19 @@ public class WallpapersAdapter extends RecyclerView.Adapter<WallpapersAdapter.Wa
                               public void onResourceReady(Bitmap resource, Transition<? super Bitmap> transition) {
 
 
-                                  Intent intent = new Intent(Intent.ACTION_VIEW);
-                                  //Intent intent = new Intent(Intent.ACTION_ATTACH_DATA);
+                                  //Intent intent = new Intent(Intent.ACTION_VIEW);
+                                  Intent intent = new Intent(Intent.ACTION_ATTACH_DATA);
                                   Uri uri = saveWallpaperAndGetUri(resource, wallpaper.id);
 
                                   if (uri != null) {
-                                      intent.setDataAndType(uri, "image/*");
-                                      mCtx.startActivity(Intent.createChooser(intent, "Wallpapers Hub"));
+                                      //intent.setDataAndType(uri, "image/*");
+                                      //mCtx.startActivity(Intent.createChooser(intent, "Wallpapers Hub"));
 
-                                      /*intent.addCategory(Intent.CATEGORY_DEFAULT);
+                                      intent.addCategory(Intent.CATEGORY_DEFAULT);
                                       intent.setDataAndType(uri, "image/jpeg");
                                       intent.putExtra("mimeType", "image/jpeg");
-                                      mCtx.startActivity(Intent.createChooser(intent, "Set as:"));*/
+                                      intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+                                      mCtx.startActivity(Intent.createChooser(intent, "Set as:"));
                                   }
                               }
                           }
