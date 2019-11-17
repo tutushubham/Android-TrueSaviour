@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
     tools:context=".activites.WallpaperMainActivity">
 
     <androidx.appcompat.widget.Toolbar
@@ -16,16 +16,21 @@
 
 
     <include layout="@layout/content_wall" />
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/navigationWall"
+    <!--
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_gravity="bottom"
-        android:background="@color/Dark"
-        android:elevation="4dp"
-        android:foregroundGravity="center"
-        app:menu="@menu/wallpaper_bottom" />
+        android:layout_height="wrap_content"/>
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/navigationWall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:background="@color/Dark"
+            android:elevation="4dp"
+            android:foregroundGravity="center"
+            app:menu="@menu/wallpaper_bottom" />
+    -->
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</LinearLayout>

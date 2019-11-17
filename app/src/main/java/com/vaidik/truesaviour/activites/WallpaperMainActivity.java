@@ -15,15 +15,15 @@ import com.vaidik.truesaviour.wallpaper.WallpaperHomeFragment;
 
 public class WallpaperMainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
 
-    BottomNavigationView bottomNavigationView;
+    /*BottomNavigationView bottomNavigationView;*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_wall);
 
-        bottomNavigationView = findViewById(R.id.navigationWall);
-        bottomNavigationView.setOnNavigationItemSelectedListener(WallpaperMainActivity.this);
+   /*     bottomNavigationView = findViewById(R.id.navigationWall);
+        bottomNavigationView.setOnNavigationItemSelectedListener(WallpaperMainActivity.this);*/
 
         displayFragment(new WallpaperHomeFragment());
     }
