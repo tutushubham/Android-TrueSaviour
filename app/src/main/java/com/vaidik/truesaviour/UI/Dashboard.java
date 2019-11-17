@@ -25,12 +25,9 @@ public class Dashboard extends Fragment {
 
         Button selfTest = view.findViewById(R.id.startTest);
 
-        selfTest.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getContext(), SelfTest.class);
-                startActivity(intent);
-            }
+        selfTest.setOnClickListener(v -> {
+            Intent intent = new Intent(getContext(), SelfTest.class);
+            startActivity(intent);
         });
 
         return view;

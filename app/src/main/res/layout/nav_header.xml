@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_height="176dp"
+    android:layout_width="match_parent"
     android:id="@+id/ll_nav_header"
     android:orientation="vertical"
     android:background="@color/Dark"
     android:gravity="bottom"
     android:padding="16dp">
 
-    <ImageView
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/image_view_profile_small"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_gravity="end"
-        android:layout_marginRight="35dp"
+        android:layout_marginEnd="30dp"
         android:contentDescription="DP"
-        android:src="@drawable/icon" />
+        android:elevation="4dp"
+        app:civ_border_color="#FF000000"
+        app:civ_border_width="2dp" />
 
     <TextView
         android:id="@+id/user_id_display"
@@ -22,6 +26,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/ubuntul"
         android:padding="8dp"
+        android:textSize="20sp"
         android:textColor="@android:color/black"
         android:text="@string/username"
         android:textStyle="bold"
@@ -33,7 +38,6 @@
         android:textColor="@android:color/black"
         android:padding="8dp"
         android:fontFamily="@font/ubuntul"
-        android:text="@string/user_email"
-        android:textStyle="bold" />
+        android:text="@string/user_email" />
 
 </LinearLayout>

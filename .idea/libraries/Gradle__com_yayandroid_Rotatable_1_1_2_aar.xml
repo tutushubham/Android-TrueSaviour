@@ -1,11 +1,11 @@
 <component name="libraryTable">
   <library name="Gradle: com.yayandroid:Rotatable:1.1.2@aar">
     <ANNOTATIONS>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f9ae99216816c373b09f75d7c649c70d/jetified-Rotatable-1.1.2/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/565e2bfc8ebded83cbe893b6c2f682dc/jetified-Rotatable-1.1.2/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f9ae99216816c373b09f75d7c649c70d/jetified-Rotatable-1.1.2/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f9ae99216816c373b09f75d7c649c70d/jetified-Rotatable-1.1.2/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/565e2bfc8ebded83cbe893b6c2f682dc/jetified-Rotatable-1.1.2/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/565e2bfc8ebded83cbe893b6c2f682dc/jetified-Rotatable-1.1.2/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

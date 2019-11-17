@@ -57,7 +57,7 @@ public class WallpaperSelectActivity extends AppCompatActivity {
         } else {
             fetchWallpapers(category);
         }
-        fetchWallpapers(category);
+
     }
 
     private void fetchFavWallpapers(final String category) {

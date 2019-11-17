@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="Gradle: com.github.medyo:android-about-page:1.2.5@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/36e38e3cd2b4681b8dbad09db3966f30/jetified-android-about-page-1.2.5/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/36e38e3cd2b4681b8dbad09db3966f30/jetified-android-about-page-1.2.5/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a97d3f7fb0aa9378abae04e6394af34d/jetified-android-about-page-1.2.5/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a97d3f7fb0aa9378abae04e6394af34d/jetified-android-about-page-1.2.5/res" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.medyo/android-about-page/1.2.5/19891f2e9d743c603ebd4c29ea1646ce40e31ab4/android-about-page-1.2.5-javadoc.jar!/" />

@@ -195,5 +195,6 @@
     <orderEntry type="library" name="Gradle: io.paperdb:paperdb:2.6@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.stone.vega.library:VegaLayoutManager:1.0.6@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.google.firebase:firebase-database-collection:17.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: de.hdodenhof:circleimageview:3.0.0@aar" level="project" />
   </component>
 </module>

@@ -100,9 +100,27 @@
                 android:textSize="16sp" />
 
             <TextView
+                android:id="@+id/or"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="130dp"
+                android:layout_marginBottom="24dp"
+                android:fontFamily="@font/ubuntul"
+                android:gravity="center"
+                android:text="OR"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <com.google.android.gms.common.SignInButton
+                android:id="@+id/button_google_sign_in"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
                 android:focusable="true"
                 android:fontFamily="@font/ubuntul"
                 android:gravity="center"

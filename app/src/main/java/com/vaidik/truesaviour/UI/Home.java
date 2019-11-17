@@ -6,13 +6,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.vaidik.truesaviour.R;
-import com.vaidik.truesaviour.activites.LoginActivity;
+import com.vaidik.truesaviour.activites.Website;
 
 
 public class Home extends Fragment {
@@ -29,14 +30,15 @@ public class Home extends Fragment {
 
 
         getStarted.setOnClickListener(v -> {
-            Intent intent = new Intent(getContext(), LoginActivity.class);
+            Intent intent = new Intent(getContext(), Website.class);
             startActivity(intent);
         });
 
         talkNow.setOnClickListener(v -> {
-            Intent intent = new Intent(getContext(), NavFrag.class);
+            Toast.makeText(getActivity(), "COMING SOON!", Toast.LENGTH_LONG).show();
+            /*Intent intent = new Intent(getContext(), NavFrag.class);
             intent.putExtra("page", "chat");
-            startActivity(intent);
+            startActivity(intent);*/
         });
 
 

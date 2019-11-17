@@ -1,6 +1,8 @@
 package com.vaidik.truesaviour.Fragments;
 
+import android.content.Intent;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -30,20 +32,23 @@ public class ContactUs extends Fragment {
 
 
         final KonfettiView konfettiView = view.findViewById(R.id.viewKonfetti);
-        submit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(final View view) {
-                konfettiView.build()
-                        .addColors(Color.YELLOW, Color.GREEN, Color.MAGENTA)
-                        .setDirection(0.0, 359.0)
-                        .setSpeed(1f, 5f)
-                        .setFadeOutEnabled(true)
-                        .setTimeToLive(2000L)
-                        .addShapes(Shape.RECT, Shape.CIRCLE)
-                        .addSizes(new Size(12, 5f))
-                        .setPosition(-50f, konfettiView.getWidth() + 50f, -50f, -50f)
-                        .streamFor(300, 5000L);
-            }
+        submit.setOnClickListener(view1 -> {
+            konfettiView.build()
+                    .addColors(Color.YELLOW, Color.GREEN, Color.MAGENTA)
+                    .setDirection(0.0, 359.0)
+                    .setSpeed(1f, 5f)
+                    .setFadeOutEnabled(true)
+                    .setTimeToLive(2000L)
+                    .addShapes(Shape.RECT, Shape.CIRCLE)
+                    .addSizes(new Size(12, 5f))
+                    .setPosition(-50f, konfettiView.getWidth() + 50f, -50f, -50f)
+                    .streamFor(300, 5000L);
+
+            Intent intent = new Intent(Intent.ACTION_SENDTO);
+            intent.setData(Uri.parse("mailto:"));
+            intent.putExtra(Intent.EXTRA_EMAIL, new String[]{"vaidik.tech@gmail.com"});
+            startActivity(intent);
+
         });
 
         return view;

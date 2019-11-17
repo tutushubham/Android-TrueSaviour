@@ -23,7 +23,9 @@ import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
+import com.vaidik.truesaviour.ActivityTrans.TrackLoad;
 import com.vaidik.truesaviour.R;
+import com.vaidik.truesaviour.activites.LoginActivity;
 
 public class SettingsWallFragment extends Fragment {
 
@@ -72,8 +74,10 @@ public class SettingsWallFragment extends Fragment {
             view.findViewById(R.id.text_view_logout).setOnClickListener(view1 -> {
                 FirebaseAuth.getInstance().signOut();
                 mGoogleSignInClient.signOut().addOnCompleteListener(task -> getActivity().getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.content_area, new SettingsWallFragment())
+                        .replace(R.id.fragment_container, new TrackLoad())
                         .commit());
+                Intent intent = new Intent(getActivity(), LoginActivity.class);
+                startActivity(intent);
 
 
             });
