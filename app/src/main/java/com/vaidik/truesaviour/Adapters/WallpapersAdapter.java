@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Environment;
@@ -166,18 +167,24 @@ public class WallpapersAdapter extends RecyclerView.Adapter<WallpapersAdapter.Wa
                               public void onResourceReady(Bitmap resource, Transition<? super Bitmap> transition) {
 
 
-                                  Intent intent = new Intent(Intent.ACTION_VIEW);
-                                  //Intent intent = new Intent(Intent.ACTION_ATTACH_DATA);
+//                                  Intent intent = new Intent(Intent.ACTION_VIEW);
+                                  Intent intent = new Intent(Intent.ACTION_ATTACH_DATA);
                                   Uri uri = saveWallpaperAndGetUri(resource, wallpaper.id);
 
-                                  if (uri != null) {
-                                      intent.setDataAndType(uri, "image/*");
-                                      mCtx.startActivity(Intent.createChooser(intent, "Wallpapers Hub"));
 
-                                      /*intent.addCategory(Intent.CATEGORY_DEFAULT);
+                                  if (uri != null) {
+                               /*       intent.setDataAndType(uri, "image/*");
+                                      mCtx.startActivity(Intent.createChooser(intent, "Wallpapers Hub"));
+*/
+                                      intent.addCategory(Intent.CATEGORY_DEFAULT);
                                       intent.setDataAndType(uri, "image/jpeg");
                                       intent.putExtra("mimeType", "image/jpeg");
-                                      mCtx.startActivity(Intent.createChooser(intent, "Set as:"));*/
+                                      List<ResolveInfo> resInfoList = mCtx.getPackageManager().queryIntentActivities(intent, PackageManager.MATCH_DEFAULT_ONLY);
+                                      for (ResolveInfo resolveInfo : resInfoList) {
+                                          String packageName = resolveInfo.activityInfo.packageName;
+                                          mCtx.grantUriPermission(packageName, uri, Intent.FLAG_GRANT_WRITE_URI_PERMISSION | Intent.FLAG_GRANT_READ_URI_PERMISSION);
+                                      }
+                                      mCtx.startActivity(Intent.createChooser(intent, "Set as:"));
                                   }
                               }
                           }
